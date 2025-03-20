@@ -1,0 +1,145 @@
+curl --request POST \
+     --url https://staging.mybankone.com/thirdpartyapiservice/apiservice/CoreTransactions/Credit \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --data '
+{
+  "RetrievalReference": "241223020052",
+  "AccountNumber": "1100302332",
+  "Amount": "50000",
+  "Narration": "Funding Customer Account",
+  "GLCode": "1633",
+  "Token": "05928f1f-7890-48f9-b792-b3f30d1b3bb0"
+}
+
+
+
+
+Response:
+
+{
+  "IsSuccessful": true,
+  "ResponseMessage": "Approved by Financial Institution",
+  "ResponseCode": "00",
+  "Reference": "A20090946012"
+}
+
+
+
+
+
+/////DEBITING CUSTOMER LOCALLY
+
+curl --request POST \
+     --url https://staging.mybankone.com/thirdpartyapiservice/apiservice/CoreTransactions/Debit \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --data '
+{
+  "Amount": "10000",
+  "RetrievalReference": "202412230203",
+  "AccountNumber": "1100302332",
+  "Narration": "Debiting Customer Account",
+  "Token": "05928f1f-7890-48f9-b792-b3f30d1b3bb0",
+  "GLCode": "1634"
+}
+'
+
+{
+  "IsSuccessful": true,
+  "ResponseMessage": "Approved by Financial Institution",
+  "ResponseCode": "00",
+  "Reference": "A20090946013"
+}
+
+
+///// OUTWARD TRANSFER
+
+curl --request POST \
+     --url https://staging.mybankone.com/thirdpartyapiservice/apiservice/Transfer/InterBankTransfer \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --data '
+{
+  "Amount": "50000",
+  "PayerAccountNumber": "1100302332",
+  "Payer": "Ephraim Enokella Atumoga",
+  "ReceiverBankCode": "076",
+  "ReceiverAccountNumber": "1019850999",
+  "ReceiverName": "Nwankwo, Gabriel Onyedikachi",
+  "TransactionReference": "230209417984",
+  "Narration": "Customer Outward Transfer",
+  "Token": "05928f1f-7890-48f9-b792-b3f30d1b3bb0"
+}
+'
+
+
+
+{
+  "Status": "Failed",
+  "StatusDescription": "Insufficient Funds",
+  "ReferenceID": 0,
+  "UniqueIdentifier": "020071569902031534520000000000000000000000",
+  "IsSuccessFul": false,
+  "ResponseMessage": "Insufficient Funds",
+  "ResponseCode": "51",
+  "Reference": "230209417984",
+  "SessionID": null,
+  "RequestStatus": true,
+  "ResponseDescription": "Insufficient Funds",
+  "ResponseStatus": "Failed"
+}
+
+
+{
+  "Status": "Failed",
+  "StatusDescription": "Duplicate Reference",
+  "ReferenceID": 0,
+  "UniqueIdentifier": null,
+  "IsSuccessFul": false,
+  "ResponseMessage": "Duplicate Reference",
+  "ResponseCode": "26",
+  "Reference": "230209417984",
+  "SessionID": null,
+  "RequestStatus": true,
+  "ResponseDescription": "Duplicate Reference",
+  "ResponseStatus": "Failed"
+}
+
+
+IsSuccessFul
+{
+  "Status": "Pending",
+  "StatusDescription": "Awaiting confirmation status.",
+  "ReferenceID": 0,
+  "UniqueIdentifier": "020071570002031535350000000000000000000000",
+  "IsSuccessFul": false,
+  "ResponseMessage": "Awaiting confirmation status.",
+  "ResponseCode": "06",
+  "Reference": "230209417985",
+  "SessionID": null,
+  "RequestStatus": true,
+  "ResponseDescription": "Awaiting confirmation status.",
+  "ResponseStatus": "Pending"
+}
+
+
+
+TRANSACTION REQUERY
+
+
+curl --request POST \
+     --url http://52.168.85.231/thirdpartyapiservice/apiservice/Transactions/TransactionStatusQuery \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --data '
+{
+  "RetrievalReference": "230209417985",
+  "TransactionDate": "2025-02-03",
+  "Amount": "10000",
+  "Token": "05928f1f-7890-48f9-b792-b3f30d1b3bb0",
+  "TransactionType": "Inter"
+}
+'
+
+
