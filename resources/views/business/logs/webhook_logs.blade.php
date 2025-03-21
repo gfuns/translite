@@ -1,14 +1,14 @@
 @extends('business.layouts.app')
 
 @section('content')
-@section('title', 'TransLite | Disputes')
+@section('title', 'TransLite | Webhook Logs')
 
 <div class="content-w">
 
     <div class="content-i">
         <div class="content-box">
             <div class="element-wrapper">
-                <h6 class="element-header">Disputes</h6>
+                <h6 class="element-header">Webhook Logs</h6>
                 <div class="custom-alert fade show custom-alert-primary">
                     <span class="os-icon os-icon-alert-circle" style="font-weight:bold"></span>
                     &nbsp;Your Business is under Review!
@@ -16,21 +16,38 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="d-flex justify-content-end w-100">
-                            <div class="custombox">
-                                <span class="atext" data-toggle="modal" data-target="#raiseDispute"
-                                    data-backdrop="static" data-keyboard="false">
-                                    <span class="os-icon os-icon-filter"></span> Raise a Dispute
-                                </span> &nbsp; | &nbsp;
-                                <span class="atext" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas">
-                                    <span class="os-icon os-icon-filter"></span> Filter
-                                </span> &nbsp; | &nbsp;
-                                <a href="" class="atext">
-                                    <span class="atext">
-                                        <span class="os-icon os-icon-download"></span>
-                                        Download
-                                    </span>
-                                </a>
-                            </div>
+
+                                <div class="dropdown">
+                                    <div class="custombox dropdown-toggle" id="dateDropdown"
+                                        data-bs-toggle="dropdown">
+                                        <span class="atext">Past 7 days: Mar 13 to Mar 20, 2025</span>
+                                    </div>
+                                    <ul class="dropdown-menu" aria-labelledby="dateDropdown">
+                                        <li><a class="dropdown-item" href="#">Yesterday: Mar 19, 2025</a>
+                                        </li>
+                                        <hr class="dropdown-divider">
+                                        <li><a class="dropdown-item" href="#">Today: Mar 20, 2025</a></li>
+                                        <hr class="dropdown-divider">
+                                        <li><a class="dropdown-item" href="#">Past 7 days: Mar 13 to Mar
+                                                20, 2025</a></li>
+                                        <hr class="dropdown-divider">
+                                        <li><a class="dropdown-item" href="#">This Week: Mar 17 to Mar 20,
+                                                2025</a></li>
+                                        <hr class="dropdown-divider">
+                                        <li><a class="dropdown-item" href="#">Last Week: Mar 17 to Mar 20,
+                                                2025</a></li>
+                                        <hr class="dropdown-divider">
+                                        <li><a class="dropdown-item" href="#">This Month: Mar 17 to Mar
+                                                20,
+                                                2025</a></li>
+                                        <hr class="dropdown-divider">
+                                        <li><a class="dropdown-item" href="#">Last Month: Mar 17 to Mar
+                                                20,
+                                                2025</a></li>
+                                        <hr class="dropdown-divider">
+                                        <li><a class="dropdown-item" href="#">Custom Date Range</a></li>
+                                    </ul>
+                                </div>
 
                         </div>
 
@@ -45,10 +62,10 @@
                                     <th>S/No</th>
                                     <th>Trans. Date</th>
                                     <th>Trans. ID</th>
-                                    <th>Reason</th>
-                                    <th>Notes</th>
-                                    <th>Document</th>
+                                    <th>Service</th>
+                                    <th>Payload</th>
                                     <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
 
@@ -57,7 +74,7 @@
                                     <td colspan="7">
                                         <div class="text-center rounded pdt-5x pdb-5x">
                                             <p><em class="far fa-sad-tear" style="font-size:46px"></em><br><br>No
-                                                Dispute Found!
+                                                Webhook Logs Found!
                                             </p>
                                         </div>
                                     </td>

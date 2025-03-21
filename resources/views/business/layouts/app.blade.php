@@ -13,8 +13,13 @@
             @include('business.layouts.nav')
 
             @yield('content')
+
         </div>
         <div class="display-type"></div>
+
+        <div class="floated-chat-btn" style="padding-right: 20px">
+            <i class="os-icon os-icon-mail-07"></i><span>Contact Support</span>
+        </div>
     </div>
     @include('business.layouts.footer')
 

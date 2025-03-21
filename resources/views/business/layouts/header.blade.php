@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="{{ asset('assets/select2/css/select2.min.css') }}" rel="stylesheet" />
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
+
     <title>@yield('title')</title>
 
     <style type="text/css">
@@ -201,10 +203,188 @@
             width: 80px;
         }
 
+
+
+        #filterOffcanvas {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            /* Start hidden */
+            width: 300px;
+            height: 100vh;
+            background: white;
+            box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease-in-out;
+            /* Smooth transition */
+            z-index: 1050;
+        }
+
+        #filterOffcanvas.show {
+            right: 0;
+            /* Slide into view */
+        }
+
+        /* Optional backdrop */
+        .offcanvas-backdrop::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Dark overlay */
+            z-index: 1040;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+
+
+        /* Offcanvas container */
+        .offcanvas {
+            position: fixed;
+            bottom: 0;
+            z-index: 1050;
+            display: flex;
+            flex-direction: column;
+            visibility: hidden;
+            background-color: #fff;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Right side offcanvas */
+        .offcanvas-end {
+            top: 0;
+            right: 0;
+            width: 300px;
+            /* Adjust width as needed */
+            height: 100%;
+            transform: translateX(100%);
+        }
+
+        /* Show offcanvas */
+        .offcanvas.show {
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+        /* Offcanvas header */
+        .offcanvas-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Close button */
+        .offcanvas .btn-close {
+            background: transparent;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+
+
+
+        /* Ensure the offcanvas is 600px wide */
+        .offcanvas.offcanvas-end {
+            width: 550px !important;
+            /* padding: 20px; */
+        }
+
+        /* Customize the header */
+        .offcanvas-header {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 10px 5px 25px;
+        }
+
+        /* Offcanvas body styling */
+        .offcanvas-body {
+            padding: 25px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        /* Form styling */
+        .offcanvas-body .form-label {
+            font-weight: 500;
+        }
+
+        /* Form inputs */
+        .offcanvas-body .form-control {
+            padding: 7px;
+            font-size: 14px;
+            height: 40px !important;
+        }
+
+        /* Button styling */
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            /* margin-top: 20px; */
+            padding: 12px;
+            font-size: 16px;
+            /* border-radius: 8px; */
+            transition: background 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+
+        .sb {
+            padding: 20px;
+        }
+
+        .sh {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .sd {
+            font-size: 12px;
+        }
+
+        .slc {
+            width: 40px;
+            height: 40px;
+            background: rgb(236, 242, 255);
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+
+
+        .noprod {
+            padding: 180px;
+        }
+
+        .noprodimg {
+            height: 100px;
+        }
+
+        /* .sl {
+            height: 30px;
+        } */
+
         @media (max-width: 575px) {
             .custombox {
                 padding: 10px 10px 10px 10px;
                 margin: 0px 7px 20px 0px;
+            }
+
+
+            .offcanvas.offcanvas-end {
+                width: 400px !important;
+                /* padding: 20px; */
             }
         }
     </style>

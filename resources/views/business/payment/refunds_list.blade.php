@@ -84,7 +84,7 @@
 
                                 <!-- Filter Button -->
                                 <div class="custombox">
-                                    <span class="atext">
+                                    <span class="atext" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas">
                                         <span class="os-icon os-icon-filter"></span> Filter
                                     </span> &nbsp; | &nbsp;
                                     <span class="atext">
@@ -133,4 +133,42 @@
     </div>
 </div>
 
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="filterOffcanvas" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-header">
+        <h6 class="offcanvas-title" id="offcanvasLabel">Filters</h6>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                class="fa fa-times"></i></button>
+    </div>
+    <div class="offcanvas-body">
+        <!-- Add your filter form or content here -->
+        <form method="POST" action="">
+            @csrf
+            <div class="mb-3">
+                <label for="dateRange" class="form-label">Date Range</label>
+                <input type="text" class="form-control" id="dateRange" placeholder="Select Date Range"
+                    name="date_range">
+            </div>
+
+            <div class="mb-3">
+                <label for="transId" class="form-label">Transaction ID</label>
+                <input type="text" class="form-control" id="transId" placeholder="Transaction ID"
+                    name="transaction_id">
+            </div>
+            <div class="mb-5">
+                <label for="status" class="form-label">Status</label>
+                <select id="status" class="form-control" name="status">
+                    <option value="">Select Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Resolved">Resolved</option>
+                </select>
+            </div>
+            <hr/>
+            <div class="d-flex justify-content-between">
+                <button type="reset" class="btn btn-outline-primary" id="clearFilters"><i class="fa fa-trash"></i> Clear Filters</button>
+                <button type="submit" class="btn btn-primary">Apply Filter</button>
+            </div>
+        </form>
+    </div>
+</div>
 @endsection

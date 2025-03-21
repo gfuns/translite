@@ -3,9 +3,8 @@ namespace App\Http\Controllers\Business;
 
 use App\Http\Controllers\Controller;
 
-class SettingsController extends Controller
+class LogsController extends Controller
 {
-
     /**
      * Create a new controller instance.
      *
@@ -21,8 +20,8 @@ class SettingsController extends Controller
      *
      * @return void
      */
-    public function settings()
+    public function webhookLogs()
     {
-        return view("business.settings.home");
+        return view("business.logs.webhook_logs");
     }
 }

@@ -1,7 +1,7 @@
 @extends('business.layouts.app')
 
 @section('content')
-@section('title', 'TransLite | Refunds')
+@section('title', 'TransLite | Utility Bills')
 
 <div class="content-w">
     <div class="content-i">
@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="element-wrapper">
-                        <h6 class="element-header">Refunds</h6>
+                        <h6 class="element-header">Utility Bills</h6>
                         <div class="custom-alert fade show custom-alert-primary">
                             <span class="os-icon os-icon-alert-circle" style="font-weight:bold"></span>
                             &nbsp;Your Business is under Review!
@@ -22,13 +22,13 @@
 
                                     <div>
                                         <div class="custombox" style="display: flex; gap: 10px">
-                                            <a href="{{ route('business.refunds') }}?filter=summary"
+                                            <a href="{{ route('business.utilities') }}?filter=summary"
                                                 class="tabactive">
                                                 <div class="tabtext">Summary</div>
                                             </a>
-                                            <a href="{{ route('business.refunds') }}?filter=list"
+                                            <a href="{{ route('business.utilities') }}?filter=list"
                                                 class="tabinactive">
-                                                <div class="tabtext">Refunds List</div>
+                                                <div class="tabtext">Transaction List</div>
                                             </a>
                                         </div>
                                     </div>
@@ -115,8 +115,8 @@
                             <div class="row">
                                 <div class="col-6 col-md-3">
                                     <a class="element-box el-tablo" href="#" style="padding:30px">
-                                        <div class="label" style="color:black; font-size: 12px"><strong>
-                                                Processed Refunds</strong></div>
+                                        <div class="label" style="color:black; font-size: 12px"><strong>Airtime
+                                                Purchase</strong></div>
 
                                         <div class="row" style="margin-top: 10px">
                                             <div class="col-12">
@@ -128,7 +128,8 @@
                                 </div>
                                 <div class="col-6 col-md-3">
                                     <a class="element-box el-tablo" href="#" style="padding:30px">
-                                        <div class="label" style="color:black; font-size: 12px"><strong>Successful Refunds</strong></div>
+                                        <div class="label" style="color:black; font-size: 12px"><strong>Data
+                                                Purchase</strong></div>
 
                                         <div class="row" style="margin-top: 10px">
                                             <div class="col-12">
@@ -140,7 +141,8 @@
                                 </div>
                                 <div class="col-6 col-md-3">
                                     <a class="element-box el-tablo" href="#" style="padding:30px">
-                                        <div class="label" style="color:black; font-size: 12px"><strong>Pending Refunds</strong></div>
+                                        <div class="label" style="color:black; font-size: 12px"><strong>Electricity
+                                                Purchase</strong></div>
 
                                         <div class="row" style="margin-top: 10px">
                                             <div class="col-12">
@@ -152,7 +154,8 @@
                                 </div>
                                 <div class="col-6 col-md-3">
                                     <a class="element-box el-tablo" href="#" style="padding:30px">
-                                        <div class="label" style="color:black; font-size: 12px"><strong>Declined Refunds</strong></div>
+                                        <div class="label" style="color:black; font-size: 12px"><strong>TV
+                                                Subscriptions</strong></div>
 
                                         <div class="row" style="margin-top: 10px">
                                             <div class="col-12">
@@ -170,7 +173,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="filterOffcanvas" aria-labelledby="offcanvasLabel">
     <div class="offcanvas-header">
@@ -209,4 +211,5 @@
         </form>
     </div>
 </div>
+
 @endsection

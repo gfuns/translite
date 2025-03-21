@@ -114,6 +114,7 @@
 </div>
 
 <!-- Sidebar Desktop View -->
+
 <div
     class="menu-w color-scheme-dark color-style-default menu-position-side menu-side-left menu-layout-compact sub-menu-style-flyout sub-menu-color-dark selected-menu-color-light menu-activated-on-hover menu-has-selected-link">
     <div class="logo-w"><a class="logo" href="/home">
@@ -132,21 +133,21 @@
         </li>
         <li class="sub-header" style="font-size: 10px"><span>Your Business</span></li>
         <li class="">
-            <a href="{{ route("business.paymentTrxs") }}">
+            <a href="{{ route('business.paymentTrxs') }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-dollar-sign"></div>
                 </div><span>Transactions</span>
             </a>
         </li>
         <li class="selected">
-            <a href="{{ route("business.settlements") }}">
+            <a href="{{ route('business.settlements') }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-rotate-cw"></div>
                 </div><span>Settlements</span>
             </a>
         </li>
         <li class="selected">
-            <a href="{{ route("business.refunds") }}">
+            <a href="{{ route('business.refunds') }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-rotate-ccw"></div>
                 </div><span>Refunds</span>
@@ -154,30 +155,30 @@
         </li>
         <li class="sub-header" style="font-size: 10px"><span>Commerce</span></li>
         <li class="selected">
-            <a href="{{ route("business.customers") }}">
+            <a href="{{ route('business.customers') }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-users"></div>
                 </div><span>Customers</span>
             </a>
         </li>
         <li class="selected">
-            <a href="{{ route("business.paymentLinks") }}">
+            <a href="{{ route('business.paymentLinks') }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-link"></div>
                 </div><span>Payment Links</span>
             </a>
         </li>
         <li class="selected">
-            <a href="{{ route("business.invoices") }}">
+            <a href="{{ route('business.invoices') }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-newspaper"></div>
                 </div><span>Invoices</span>
             </a>
         </li>
         <li class="selected">
-            <a href="">
+            <a href="{{ route('business.pos.terminals') }}">
                 <div class="icon-w">
-                    <div ><svg width="20" height="25" viewBox="0 0 20 20" fill="none"
+                    <div><svg width="20" height="25" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <mask id="path-1-outside-1_15123_27084" maskUnits="userSpaceOnUse" x="3" y="0"
                                 width="14" height="25" fill="white">
@@ -306,7 +307,7 @@
         </li>
         <li class="sub-header" style="font-size: 10px"><span>Bills</span></li>
         <li class="selected">
-            <a href="{{ route("business.utilities") }}">
+            <a href="{{ route('business.utilities') }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-bar-chart-up"></div>
                 </div><span>Utility Bills</span>
@@ -314,21 +315,21 @@
         </li>
         <li class="sub-header" style="font-size: 10px"><span>Others</span></li>
         <li class="selected">
-            <a href="{{ route("business.disputes") }}">
+            <a href="{{ route('business.disputes') }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-alert-triangle"></div>
                 </div><span>Disputes</span>
             </a>
         </li>
         <li class="selected">
-            <a href="">
+            <a href="{{ route('business.webhookLogs') }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-activity"></div>
                 </div><span>Webhook Logs</span>
             </a>
         </li>
         <li class="selected">
-            <a href="{{ route("business.settings") }}">
+            <a href="{{ route('business.settings') }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-settings"></div>
                 </div><span>Settings</span>

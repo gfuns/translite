@@ -1,14 +1,14 @@
 @extends('business.layouts.app')
 
 @section('content')
-@section('title', 'TransLite | Settlements')
+@section('title', 'TransLite | Utility Bills')
 
 <div class="content-w">
 
     <div class="content-i">
         <div class="content-box">
             <div class="element-wrapper">
-                <h6 class="element-header">Settlements</h6>
+                <h6 class="element-header">Utility Bills</h6>
                 <div class="custom-alert fade show custom-alert-primary">
                     <span class="os-icon os-icon-alert-circle" style="font-weight:bold"></span>
                     &nbsp;Your Business is under Review!
@@ -21,13 +21,13 @@
 
                             <div>
                                 <div class="custombox" style="display: flex; gap: 10px">
-                                    <a href="{{ route('business.settlements') }}?filter=summary"
+                                    <a href="{{ route('business.paymentTrxs') }}?filter=summary"
                                         class="tabinactive">
-                                        <div class="tabtext">Settlement Summary</div>
+                                        <div class="tabtext">Summary</div>
                                     </a>
-                                    <a href="{{ route('business.settlements') }}?filter=list"
+                                    <a href="{{ route('business.paymentTrxs') }}?filter=list"
                                         class="tabactive">
-                                        <div class="tabtext">Settlement Report</div>
+                                        <div class="tabtext">Transaction List</div>
                                     </a>
                                 </div>
                             </div>
@@ -107,9 +107,10 @@
                                     <th>Trans. ID</th>
                                     <th>Merchant Reference</th>
                                     <th>Service</th>
+                                    <th>Provider</th>
                                     <th>Amount</th>
-                                    <th>Narration</th>
                                     <th>Status</th>
+                                    <th>Details</th>
                                 </tr>
                             </thead>
 
@@ -117,7 +118,7 @@
                                 <tr class="bg-white">
                                     <td colspan="8">
                                         <div class="text-center rounded pdt-5x pdb-5x">
-                                            <p><em class="far fa-sad-tear" style="font-size:46px"></em><br><br>No Settlement Record Found!
+                                            <p><em class="far fa-sad-tear" style="font-size:46px"></em><br><br>No Transaction Found!
                                             </p>
                                         </div>
                                     </td>
@@ -170,4 +171,5 @@
         </form>
     </div>
 </div>
+
 @endsection
