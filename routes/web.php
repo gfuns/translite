@@ -53,12 +53,17 @@ Route::group([
 
     Route::get('/webhook-logs', [LogsController::class, 'webhookLogs'])->name('business.webhookLogs');
 
-    Route::get('/settings', [SettingsController::class, 'settings'])->name('business.settings');
-
     Route::get('/xtrapay-pos', [POSController::class, 'xtrapayPos'])->name('business.pos.terminals');
 
     Route::get('/xtrapay-pos/branches', [POSController::class, 'branches'])->name('business.pos.branches');
 
     Route::get('/xtrapay-pos/requests', [POSController::class, 'requests'])->name('business.pos.requests');
 
+    Route::get('/settings', [SettingsController::class, 'settings'])->name('business.settings');
+
+    Route::get('/settings/profile', [SettingsController::class, 'userProfile'])->name('business.settings.profile');
+
+    Route::get('/settings/keys', [SettingsController::class, 'apiKeys'])->name('business.settings.apiKeys');
+
+    Route::get('/settings/webhooks', [SettingsController::class, 'webhooks'])->name('business.settings.webhooks');
 });

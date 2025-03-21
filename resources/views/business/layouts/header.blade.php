@@ -423,17 +423,107 @@
             width: 100%;
         }
 
-        .pmbox span{
+        .pmbox span {
             font-weight: bold;
             font-size: 17px
         }
 
-        .poor{
-            color:red;
+        .poor {
+            color: red;
         }
 
-        .good{
-            color:green;
+        .good {
+            color: green;
+        }
+
+        /* Custom sleek toggle switch */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 48px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-switch .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .toggle-switch .slider:before {
+            content: "";
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        .toggle-switch input:checked+.slider {
+            background-color: #0d6efd;
+            /* Bootstrap primary color */
+        }
+
+        .toggle-switch input:checked+.slider:before {
+            transform: translateX(24px);
+        }
+
+        .pencil {
+            border-radius: 8px;
+            border: 1.5px solid #E2E8F0;
+            background-color: #fff;
+            box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
+            padding: 5px 10px 5px 10px;
+            cursor: pointer;
+        }
+
+
+
+        .password-toggle {
+            position: relative;
+        }
+
+        .password-toggle input[type="password"] {
+            padding-right: 30px;
+        }
+
+        .password-toggle .toggle-password {
+            position: absolute;
+            top: 58%;
+            right: 25px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .password-toggle .toggle-password-2 {
+            position: absolute;
+            top: 58%;
+            right: 25px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .password-toggle .toggle-password-3 {
+            position: absolute;
+            top: 58%;
+            right: 25px;
+            transform: translateY(-50%);
+            cursor: pointer;
         }
 
         @media (max-width: 575px) {

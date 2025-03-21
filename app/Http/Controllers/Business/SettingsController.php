@@ -2,6 +2,7 @@
 namespace App\Http\Controllers\Business;
 
 use App\Http\Controllers\Controller;
+use Auth;
 
 class SettingsController extends Controller
 {
@@ -24,5 +25,18 @@ class SettingsController extends Controller
     public function settings()
     {
         return view("business.settings.home");
+    }
+
+    public function userProfile()
+    {
+        $google2fa       = app('pragmarx.google2fa');
+        $google2faSecret = $google2fa->generateSecretKey();
+        $QRImage         = $google2fa->getQRCodeInline(
+            env('APP_NAME'),
+            Auth::user()->email,
+            $google2faSecret,
+            140
+        );
+        return view("business.settings.profile", compact("google2faSecret", "QRImage"));
     }
 }

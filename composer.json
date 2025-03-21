@@ -15,7 +15,9 @@
         "maatwebsite/excel": "^3.1",
         "mailgun/mailgun-php": "^4.3",
         "owen-it/laravel-auditing": "^13.6",
+        "pragmarx/google2fa-laravel": "^2.3",
         "realrashid/sweet-alert": "^7.2",
+        "simplesoftwareio/simple-qrcode": "^4.2",
         "symfony/mailgun-mailer": "^6.4",
         "tymon/jwt-auth": "^2.1"
     },
