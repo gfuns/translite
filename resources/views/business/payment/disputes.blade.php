@@ -186,7 +186,7 @@
             <hr/>
             <div class="d-flex justify-content-between">
                 <button type="reset" class="btn btn-outline-primary" id="clearFilters"><i class="fa fa-trash"></i> Clear Filters</button>
-                <button type="submit" class="btn btn-primary">Apply Filter</button>
+                <button type="submit" class="btn btn-primary" style="font-size: 12px">Apply Filter</button>
             </div>
         </form>
     </div>

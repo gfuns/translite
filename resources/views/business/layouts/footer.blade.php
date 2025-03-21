@@ -1,8 +1,6 @@
     <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('bower_components/popper.js/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('bower_components/moment/moment.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    {{-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> --}}
     {{-- <script src="{{ asset('bower_components/chart.js/dist/Chart.min.js') }}"></script> --}}
     <script src="{{ asset('bower_components/jquery-bar-rating/dist/jquery.barrating.min.js') }}"></script>
     <script src="{{ asset('bower_components/bootstrap-validator/dist/validator.min.js') }}"></script>
@@ -35,10 +33,6 @@
 
     @include('sweetalert::alert')
 
+    <script>
 
-    {{-- <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.ckeditor').ckeditor();
-        });
-    </script> --}}
+    </script>

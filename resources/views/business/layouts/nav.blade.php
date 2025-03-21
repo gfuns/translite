@@ -337,30 +337,36 @@
         </li>
 
 
-        <li class="">
-            <a href="{{ route('logout') }}"
-                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <div class="icon-w">
-                    <div class="os-icon os-icon-signs-11"></div>
-                </div><span>Logout</span>
-            </a>
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
-            </form>
-        </li>
     </ul>
 
     <hr />
 
-    <div class="logged-user-w avatar-inline">
-        <div class="logged-user-i">
-            <div class="avatar-w"><img alt=""
-                    src="{{ Auth::user()->photograph == null ? asset('user.png') : Auth::user()->photograph }}"></div>
-            <div class="logged-user-info-w">
-                <div class="logged-user-name">{{ Auth::user()->firstName . ' ' . Auth::user()->lastName }}</div>
-                <div class="logged-user-role">{{ Auth::user()->role }}</div>
+    <div class="dropdown-container mb-2">
+        <a href="#" id="dropdownToggle" style="text-decoration: none; color:white">
+            <div class="logged-user-w avatar-inline">
+                <div class="logged-user-i">
+                    <div class="avatar-w">GN</div>
+                    <div class="logged-user-info-w">
+                        <div style="display: flex; gap: 10px;">
+                            <div class="logged-user-name">{{ Auth::user()->firstName . ' ' . Auth::user()->lastName }}
+                            </div>
+                            <div style="margin-top:3px"> <i class="fas fa-ellipsis-h" style="font-size: 18px"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </a>
+
+        <div class="dropdown-menu-custom" id="customDropdown">
+            <a href="{{ route('business.settings.profile') }}"><i class="fas fa-user-shield" style="margin-right: 10px"></i> Profile</a>
+            <a href="{{ route('business.settings') }}"><i class="fa fa-cog" style="margin-right: 10px"></i> Account Settings</a>
+            <a href="{{ route('logout') }}"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt" style="margin-right: 10px"></i> Logout</a>
         </div>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
     </div>
 </div>

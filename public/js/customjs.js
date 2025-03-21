@@ -33,13 +33,6 @@ $(document).ready(function() {
 });
 
 
-document.getElementById("clearFilters").addEventListener("click", function() {
-    document.getElementById("dateRange").value = "";
-    document.getElementById("transId").value = "";
-    document.getElementById("status").value = "";
-});
-
-
 function closeOffcanvas() {
     let offcanvas = document.getElementById("filterOffcanvas");
     offcanvas.classList.remove("show");
@@ -52,3 +45,25 @@ function closeOffcanvas() {
 
 
 
+document.getElementById("dropdownToggle").addEventListener("click", function(event) {
+    event.preventDefault();
+    let dropdown = document.getElementById("customDropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function(event) {
+    let dropdown = document.getElementById("customDropdown");
+    let toggle = document.getElementById("dropdownToggle");
+
+    if (!toggle.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.style.display = "none";
+    }
+});
+
+
+document.getElementById("clearFilters").addEventListener("click", function() {
+    document.getElementById("dateRange").value = "";
+    document.getElementById("transId").value = "";
+    document.getElementById("status").value = "";
+});

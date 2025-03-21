@@ -166,5 +166,6 @@
 @endsection
 
 @section('customjs')
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{{ asset('js/dashboard.js') }}?version=4.5.0"></script>
 @endsection

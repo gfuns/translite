@@ -24,28 +24,7 @@ function updateChart(canvasId, percentage, color) {
                 tooltip: {
                     enabled: false
                 }, // Hide tooltip
-
-
             },
-            animation: {
-                onComplete: function() {
-                    let chartInstance = myDoughnutChart;
-                    let ctx = chartInstance.ctx;
-                    let width = chartInstance.width;
-                    let height = chartInstance.height;
-                    let text = "75%";
-
-                    ctx.font = "bold 24px Arial";
-                    ctx.fillStyle = "#000";
-                    ctx.textAlign = "center";
-                    ctx.textBaseline = "middle";
-
-                    let centerX = width / 2;
-                    let centerY = height / 2;
-
-                    ctx.fillText(text, centerX, centerY);
-                }
-            }
         }
     };
 

@@ -186,12 +186,26 @@
                                         <div class="eb">
                                             <h6>API Keys </h6>
                                             <div class="row">
-                                                <div class="col-12 col-md-10 mb-3" style="font-size: 12px">These keys
+                                                <div class="col-12 col-md-8 mb-4" style="font-size: 12px">These keys
                                                     will allow you
                                                     to authenticate API
                                                     requests and should only be used in the live environment.</div>
-                                                <div class="col-12 col-md-2 mb-3" style="font-size: 12px">Regenerate
-                                                    Keys</div>
+                                                <div class="col-12 col-md-4 mb-4 d-md-flex justify-content-end " style="font-size: 12px"
+                                                    data-toggle="modal" data-target="#genKey" data-backdrop="static"
+                                                    data-keyboard="false">
+                                                    <span class="genkey"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="20" height="20" viewBox="0 0 20 20"
+                                                            fill="none">
+                                                            <path
+                                                                d="M16.6667 9.1665H18.3334C17.9142 4.9554 14.3525 1.6665 10.0207 1.6665C5.40694 1.6665 1.66675 5.39746 1.66675 9.99984C1.66675 14.6022 5.40694 18.3332 10.0207 18.3332C13.4463 18.3332 16.3904 16.2763 17.6796 13.3332"
+                                                                stroke="#141B34" stroke-width="1.25"
+                                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path
+                                                                d="M11.8749 9.15216V7.65891C11.8749 6.65076 11.0354 5.8335 9.99992 5.8335C8.96442 5.8335 8.12492 6.65076 8.12492 7.65891V9.15216M9.99992 14.1668C8.38909 14.1668 7.08325 12.8955 7.08325 11.3273C7.08325 9.75908 8.38909 8.48775 9.99992 8.48775C11.6108 8.48775 12.9166 9.75908 12.9166 11.3273C12.9166 12.8955 11.6108 14.1668 9.99992 14.1668Z"
+                                                                stroke="#141B34" stroke-width="1.25"
+                                                                stroke-linecap="round"></path>
+                                                        </svg> Regenerate Keys </span>
+                                                </div>
                                             </div>
 
                                             <div class="keydisplay">
@@ -238,13 +252,12 @@
 </div>
 
 
-<div aria-hidden="true" aria-labelledby="changePassword" class="modal fade" id="changePassword" role="dialog"
-    tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+<div aria-hidden="true" aria-labelledby="genKey" class="modal fade" id="genKey" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-dialog-top modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    Change Password
+                    Generate new Secret Keys
                 </h5>
                 <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                     <span aria-hidden="true"> &times;</span>
@@ -253,43 +266,16 @@
             <form method="post" action="">
                 @csrf
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-12 password-toggle">
-                            <div class="form-group">
-                                <label for="">Old Password</label>
-                                <input id="password" type="password" name="old_password" value=""
-                                    placeholder="Old Password" class="form-control" required />
-                                <span class="toggle-password" onclick="togglePasswordVisibility()">
-                                    <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
+                    <p>This action will cause both your live and test secret keys to expire. You’ll have to update
+                        your website and servers with the new keys to continue processing API calls through TransLite
+                    </p>
 
-                        <div class="col-sm-12 password-toggle">
-                            <div class="form-group">
-                                <label for="">New Password</label>
-                                <input id="password2" type="password" name="password" value=""
-                                    placeholder="New Password" class="form-control" required />
-                                <span class="toggle-password-2" onclick="togglePassword2Visibility()">
-                                    <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 password-toggle">
-                            <div class="form-group">
-                                <label for="">New Password Confirmation</label>
-                                <input id="password3" type="password" name="password_confirmation" value=""
-                                    placeholder="New Password Confirmation" class="form-control" required />
-                                <span class="toggle-password-3" onclick="togglePassword3Visibility()">
-                                    <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal" type="button">
                         Cancel</button>
-                    <button class="btn btn-primary" type="submit">
-                        Change Password
+                    <button class="btn btn-primary" type="submit" style="font-size: 12px">
+                        Generate New Secret Keys
                     </button>
                 </div>
             </form>

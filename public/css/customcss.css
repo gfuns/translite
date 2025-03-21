@@ -5,13 +5,12 @@
 .uld {
     list-style: none !important;
     padding-bottom: 30px;
-    padding-right: 10px
+    padding-right: 10px;
 }
 
 .onbh {
     color: rgb(7, 101, 255);
     /* font-weight: bold; */
-
 }
 
 .onbs {
@@ -30,7 +29,7 @@
 .progress-container {
     position: relative;
     padding-left: 25px;
-    padding-right: 20px
+    padding-right: 20px;
 }
 
 .progress-step {
@@ -95,7 +94,7 @@
 
 .custom-alert {
     position: relative;
-    padding: .3rem 1.25rem;
+    padding: 0.3rem 1.25rem;
     margin-bottom: 30px;
     border: 1px solid transparent;
     border-radius: 6px;
@@ -134,15 +133,14 @@
 
 .tabinactive:hover {
     text-decoration: none;
-    background-color: #E2E8F0;
+    background-color: #e2e8f0;
     border-radius: 5px !important;
     /* Prevents underline on hover */
 }
 
-
 .dashbox {
     border-radius: 8px;
-    border: 1px solid #E2E8F0;
+    border: 1px solid #e2e8f0;
     background-color: #fff;
     box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
     padding: 10px 10px 10px 10px;
@@ -151,7 +149,7 @@
 
 .custombox {
     border-radius: 8px;
-    border: 1px solid #E2E8F0;
+    border: 1px solid #e2e8f0;
     background-color: #fff;
     box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
     padding: 10px 10px 10px 10px;
@@ -179,7 +177,7 @@
 }
 
 .btn-default {
-    background-color: #E2E8F0;
+    background-color: #e2e8f0;
 }
 
 input[type="file"]::-webkit-file-upload-button {
@@ -195,8 +193,6 @@ input[type="file"]::file-selector-button {
     height: 23px;
     width: 80px;
 }
-
-
 
 #filterOffcanvas {
     position: fixed;
@@ -230,8 +226,6 @@ input[type="file"]::file-selector-button {
     z-index: 1040;
     transition: opacity 0.3s ease-in-out;
 }
-
-
 
 /* Offcanvas container */
 .offcanvas {
@@ -279,9 +273,6 @@ input[type="file"]::file-selector-button {
     cursor: pointer;
 }
 
-
-
-
 /* Ensure the offcanvas is 600px wide */
 .offcanvas.offcanvas-end {
     width: 550px !important;
@@ -328,7 +319,6 @@ input[type="file"]::file-selector-button {
     background-color: #0056b3;
 }
 
-
 .sb {
     padding: 20px;
 }
@@ -355,7 +345,6 @@ input[type="file"]::file-selector-button {
     align-items: center;
 }
 
-
 .noprod {
     padding: 180px;
 }
@@ -367,7 +356,6 @@ input[type="file"]::file-selector-button {
 /* .sl {
     height: 30px;
 } */
-
 
 .metrics-container {
     background-color: rgb(249, 250, 251);
@@ -382,7 +370,7 @@ input[type="file"]::file-selector-button {
 
 .metrics-container div span {
     font-weight: bold;
-    font-size: 20px
+    font-size: 20px;
 }
 
 .revenuebox {
@@ -402,14 +390,14 @@ input[type="file"]::file-selector-button {
 .pmbox {
     background: white;
     border-radius: 8px;
-    border: 1px solid #E2E8F0;
+    border: 1px solid #e2e8f0;
     padding: 20px;
     width: 100%;
 }
 
 .pmbox span {
     font-weight: bold;
-    font-size: 17px
+    font-size: 17px;
 }
 
 .poor {
@@ -458,25 +446,23 @@ input[type="file"]::file-selector-button {
     border-radius: 50%;
 }
 
-.toggle-switch input:checked+.slider {
+.toggle-switch input:checked + .slider {
     background-color: #0d6efd;
     /* Bootstrap primary color */
 }
 
-.toggle-switch input:checked+.slider:before {
+.toggle-switch input:checked + .slider:before {
     transform: translateX(24px);
 }
 
 .pencil {
     border-radius: 8px;
-    border: 1.5px solid #E2E8F0;
+    border: 1.5px solid #e2e8f0;
     background-color: #fff;
     box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
     padding: 5px 10px 5px 10px;
     cursor: pointer;
 }
-
-
 
 .password-toggle {
     position: relative;
@@ -510,7 +496,6 @@ input[type="file"]::file-selector-button {
     cursor: pointer;
 }
 
-
 .devbtn {
     height: 35px;
     font-size: 13px;
@@ -536,15 +521,15 @@ input[type="file"]::file-selector-button {
 
 .keydisplay {
     border-radius: 8px;
-    border: 1.5px solid #E2E8F0;
+    border: 1.5px solid #e2e8f0;
     background-color: #fff;
     box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
     padding: 5px 10px 5px 10px;
-    margin: 30px 0px;
+    margin: 10px 0px 30px 0px;
 }
 
 .copy {
-    color: #097CFF;
+    color: #097cff;
     cursor: pointer;
     font-size: 18px;
 }
@@ -569,17 +554,51 @@ input[type="file"]::file-selector-button {
     font-weight: 500;
 }
 
+.genkey {
+    border: 1.5px solid rgb(234, 236, 240);
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu-custom {
+    position: absolute;
+    bottom: 100%;
+    /* Places it above */
+    left: 15px;
+    background: white;
+    color: black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    min-width: 230px;
+}
+
+.dropdown-menu-custom a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu-custom a:hover {
+    background: #f1f1f1;
+}
+
 @media (max-width: 575px) {
     .custombox {
         padding: 10px 10px 10px 10px;
         margin: 0px 7px 20px 0px;
     }
 
-
     .offcanvas.offcanvas-end {
         width: 400px !important;
         /* padding: 20px; */
     }
-
-
 }
