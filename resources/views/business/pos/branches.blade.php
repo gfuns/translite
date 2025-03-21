@@ -46,7 +46,7 @@
                                 <div class="custombox">
                                     <span class="atext" data-toggle="modal" data-target="#createBranch"
                                     data-backdrop="static" data-keyboard="false">
-                                        <span class="os-icon os-icon-edit"></span> Create Branch
+                                        <span class="os-icon os-icon-hierarchy-structure-2"></span> Create Branch
                                     </span>&nbsp; | &nbsp;
                                     <span class="atext">
                                         <a href="{{ route("business.pos.requests") }}" class="atext"><span class="os-icon os-icon-edit"></span> Terminal Requests</a>

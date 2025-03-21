@@ -156,6 +156,15 @@
         }
 
 
+        .dashbox {
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+            background-color: #fff;
+            box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
+            padding: 10px 10px 10px 10px;
+            margin: 0px 0px 10px 10px;
+        }
+
         .custombox {
             border-radius: 8px;
             border: 1px solid #E2E8F0;
@@ -375,6 +384,58 @@
             height: 30px;
         } */
 
+
+        .metrics-container {
+            background-color: rgb(249, 250, 251);
+            border-top: 1.3px solid rgb(234, 236, 240);
+            margin: 0px;
+        }
+
+        .metrics-container div {
+            border-right: 1.3px solid rgb(234, 236, 240);
+            padding: 20px 20px 20px 30px;
+        }
+
+        .metrics-container div span {
+            font-weight: bold;
+            font-size: 20px
+        }
+
+        .revenuebox {
+            padding: 10px 10px 30px 30px;
+        }
+
+        .revenue {
+            font-size: 50px;
+            font-weight: bolder;
+        }
+
+        .settlementval {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .pmbox {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .pmbox span{
+            font-weight: bold;
+            font-size: 17px
+        }
+
+        .poor{
+            color:red;
+        }
+
+        .good{
+            color:green;
+        }
+
         @media (max-width: 575px) {
             .custombox {
                 padding: 10px 10px 10px 10px;
@@ -386,6 +447,8 @@
                 width: 400px !important;
                 /* padding: 20px; */
             }
+
+
         }
     </style>
 </head>
