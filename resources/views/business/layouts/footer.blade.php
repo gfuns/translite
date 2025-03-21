@@ -29,6 +29,7 @@
     <script src="{{ asset('js/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('js/main5739.js') }}?version=4.5.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('assets/select2/js/select2.min.js') }}"></script>
 
     @include('sweetalert::alert')
@@ -84,126 +85,6 @@
             setTimeout(() => {
                 document.body.classList.remove("offcanvas-backdrop");
             }, 300); // Adjust timing to match CSS transition
-        }
-
-
-        document.getElementById("editProfile").addEventListener("click", function() {
-            // Enable all input fields
-            document.querySelectorAll("input[readonly]").forEach(input => {
-                input.removeAttribute("readonly");
-            });
-
-            // Show the buttons div
-            document.getElementById("buttons").style.display = "block";
-
-            // Hide the pencil icon
-            document.getElementById("editProfile").style.display = "none";
-        });
-
-        function updateChart(canvasId, percentage, color) {
-            let ctx = document.getElementById(canvasId).getContext('2d');
-            // Data for the chart
-            let data = {
-                datasets: [{
-                    data: [percentage, 100 - percentage], // Completed vs Remaining
-                    backgroundColor: [color, '#E0E0E0'], // Dynamic color & gray for remaining
-                    borderWidth: 0
-                }]
-            };
-
-            // Chart configuration
-            let config = {
-                type: 'doughnut',
-                data: data,
-                options: {
-                    cutout: '70%', // Controls thickness of the chart
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }, // Hide legend
-                        tooltip: {
-                            enabled: false
-                        }, // Hide tooltip
-
-
-                    },
-                    animation: {
-                        onComplete: function() {
-                            let chartInstance = myDoughnutChart;
-                            let ctx = chartInstance.ctx;
-                            let width = chartInstance.width;
-                            let height = chartInstance.height;
-                            let text = "75%";
-
-                            ctx.font = "bold 24px Arial";
-                            ctx.fillStyle = "#000";
-                            ctx.textAlign = "center";
-                            ctx.textBaseline = "middle";
-
-                            let centerX = width / 2;
-                            let centerY = height / 2;
-
-                            ctx.fillText(text, centerX, centerY);
-                        }
-                    }
-                }
-            };
-
-            // Create the chart instance
-            window.doughnutChartInstance = new Chart(ctx, config);
-        }
-
-        // Example Usage
-        updateChart("card", 100, "#097CFF");
-        updateChart("transfer", 50, "#097CFF");
-        updateChart("ussd", 0, "#097CFF");
-
-
-
-        function togglePasswordVisibility() {
-            var passwordInput = document.getElementById("password");
-            var icon = document.querySelector(".toggle-password i");
-
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                icon.classList.remove("fa-eye");
-                icon.classList.add("fa-eye-slash");
-            } else {
-                passwordInput.type = "password";
-                icon.classList.remove("fa-eye-slash");
-                icon.classList.add("fa-eye");
-            }
-        }
-
-        function togglePassword2Visibility() {
-            var passwordInput = document.getElementById("password2");
-            var icon = document.querySelector(".toggle-password-2 i");
-
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                icon.classList.remove("fa-eye");
-                icon.classList.add("fa-eye-slash");
-            } else {
-                passwordInput.type = "password";
-                icon.classList.remove("fa-eye-slash");
-                icon.classList.add("fa-eye");
-            }
-        }
-
-        function togglePassword3Visibility() {
-            var passwordInput = document.getElementById("password3");
-            var icon = document.querySelector(".toggle-password-3 i");
-
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                icon.classList.remove("fa-eye");
-                icon.classList.add("fa-eye-slash");
-            } else {
-                passwordInput.type = "password";
-                icon.classList.remove("fa-eye-slash");
-                icon.classList.add("fa-eye");
-            }
         }
     </script>
 

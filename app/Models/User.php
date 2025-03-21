@@ -69,6 +69,6 @@ class User extends Authenticatable implements Auditable
 
     public function business()
     {
-        return $this->hasMany('App\Models\Business', 'user_id');
+        return $this->hasOne('App\Models\Business', 'user_id');
     }
 }

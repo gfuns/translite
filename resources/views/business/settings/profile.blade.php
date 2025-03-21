@@ -179,7 +179,7 @@
     <div class="modal-dialog modal-dialog-centered modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                 <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                     <span aria-hidden="true"> &times;</span>
                 </button>
             </div>
@@ -189,9 +189,10 @@
                 <div class="modal-body">
                     <h4 class="text-center card-title mb-4" style="color: black">Two Factor Authentication Setup
                     </h4>
-                    <p style="color: black"><strong>Step 1:</strong> Download and Install the free Google Authenticator app from <br/><a target="_blank"
+                    <p style="color: black"><strong>Step 1:</strong> Download and Install the free Google Authenticator
+                        app from <br /><a target="_blank"
                             href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Google
-                            Play Store</a>  or <a target="_blank"
+                            Play Store</a> or <a target="_blank"
                             href="https://itunes.apple.com/us/app/google-authenticator/id388497605">Apple
                             Store</a>.</p>
                     <p style="color: black">
@@ -246,4 +247,69 @@
         </div>
     </div>
 </div>
+@endsection
+
+
+@section('customjs')
+
+<script type="text/javascript">
+    function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        var icon = document.querySelector(".toggle-password i");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+        }
+    }
+
+    function togglePassword2Visibility() {
+        var passwordInput = document.getElementById("password2");
+        var icon = document.querySelector(".toggle-password-2 i");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+        }
+    }
+
+    function togglePassword3Visibility() {
+        var passwordInput = document.getElementById("password3");
+        var icon = document.querySelector(".toggle-password-3 i");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+        }
+    }
+
+
+    document.getElementById("editProfile").addEventListener("click", function() {
+        // Enable all input fields
+        document.querySelectorAll("input[readonly]").forEach(input => {
+            input.removeAttribute("readonly");
+        });
+
+        // Show the buttons div
+        document.getElementById("buttons").style.display = "block";
+
+        // Hide the pencil icon
+        document.getElementById("editProfile").style.display = "none";
+    });
+</script>
 @endsection

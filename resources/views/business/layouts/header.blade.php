@@ -39,6 +39,11 @@
             font-size: 12px;
         }
 
+        .devstep {
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
         .step-element {
             margin-top: 10px;
         }
@@ -524,6 +529,65 @@
             right: 25px;
             transform: translateY(-50%);
             cursor: pointer;
+        }
+
+
+        .devbtn {
+            height: 35px;
+            font-size: 13px;
+            background: rgb(236, 242, 255);
+            color: rgb(7, 101, 255);
+            gap: 8px;
+            display: flex;
+            min-width: 120px;
+            border-radius: 5px;
+            -webkit-box-align: center;
+            align-items: center;
+            font-weight: 500;
+            border: none;
+            transition: 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .devbtn:hover {
+            background: rgb(236, 242, 255);
+            color: rgb(7, 101, 255);
+        }
+
+        .keydisplay {
+            border-radius: 8px;
+            border: 1.5px solid #E2E8F0;
+            background-color: #fff;
+            box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
+            padding: 5px 10px 5px 10px;
+            margin: 30px 0px;
+        }
+
+        .copy {
+            color: #097CFF;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .labelpk {
+            border-radius: 8px;
+            padding: 2px 8px;
+            background-color: rgb(231, 246, 236);
+            color: rgb(9, 145, 55);
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .labelsk {
+            border-radius: 8px;
+            padding: 2px 8px;
+            background-color: rgb(254, 243, 242);
+            color: rgb(240, 68, 56);
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 500;
         }
 
         @media (max-width: 575px) {
