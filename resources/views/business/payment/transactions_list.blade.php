@@ -23,11 +23,11 @@
                                 <div class="custombox" style="display: flex; gap: 10px">
                                     <a href="{{ route('business.paymentTrxs') }}?filter=summary"
                                         class="tabinactive">
-                                        <div>Summary</div>
+                                        <div class="tabtext">Summary</div>
                                     </a>
                                     <a href="{{ route('business.paymentTrxs') }}?filter=list"
                                         class="tabactive">
-                                        <div>Transaction List</div>
+                                        <div class="tabtext">Transaction List</div>
                                     </a>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                                     <span class="atext">
                                         <span class="os-icon os-icon-filter"></span> Filter
                                     </span> &nbsp; | &nbsp;
-                                    <span>
+                                    <span class="atext">
                                         <a href="" class="atext"><span class="os-icon os-icon-download"></span> Download</a>
                                     </span>
                                 </div>
@@ -103,8 +103,8 @@
                             <thead>
                                 <tr>
                                     <th>S/No</th>
-                                    <th>Date</th>
-                                    <th>Transaction ID</th>
+                                    <th>Trans. Date</th>
+                                    <th>Trans. ID</th>
                                     <th>Merchant Reference</th>
                                     <th>Service</th>
                                     <th>Amount</th>

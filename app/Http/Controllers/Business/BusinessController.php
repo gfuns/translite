@@ -42,4 +42,54 @@ class BusinessController extends Controller
 
         }
     }
+
+    /**
+     * settlements
+     *
+     * @param Request request
+     *
+     * @return void
+     */
+    public function settlements(Request $request)
+    {
+        if (isset($request->filter) && $request->filter == "list") {
+            return view("business.payment.settlements_list");
+
+        } else {
+            return view("business.payment.settlements_summary");
+
+        }
+    }
+
+    /**
+     * refunds
+     *
+     * @param Request request
+     *
+     * @return void
+     */
+    public function refunds(Request $request)
+    {
+        if (isset($request->filter) && $request->filter == "list") {
+            return view("business.payment.refunds_list");
+
+        } else {
+            return view("business.payment.refunds_summary");
+
+        }
+    }
+
+    /**
+     * disputes
+     *
+     * @param Request request
+     *
+     * @return void
+     */
+    public function disputes(Request $request)
+    {
+        return view("business.payment.disputes");
+
+    }
+
 }

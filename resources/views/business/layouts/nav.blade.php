@@ -306,7 +306,7 @@
         </li>
         <li class="sub-header" style="font-size: 10px"><span>Bills</span></li>
         <li class="selected">
-            <a href="">
+            <a href="{{ route("business.utilities") }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-bar-chart-up"></div>
                 </div><span>Utility Bills</span>
@@ -314,7 +314,7 @@
         </li>
         <li class="sub-header" style="font-size: 10px"><span>Others</span></li>
         <li class="selected">
-            <a href="">
+            <a href="{{ route("business.disputes") }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-alert-triangle"></div>
                 </div><span>Disputes</span>
@@ -328,7 +328,7 @@
             </a>
         </li>
         <li class="selected">
-            <a href="">
+            <a href="{{ route("business.settings") }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-settings"></div>
                 </div><span>Settings</span>

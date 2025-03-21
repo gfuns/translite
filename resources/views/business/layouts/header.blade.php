@@ -4,7 +4,6 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <link rel="shortcut icon" href="{{ asset('img/Version3/favicon.svg') }}" type="image/x-icon">
-    <link href="{{ asset('bower_components/select2/dist/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('bower_components/bootstrap-daterangepicker/daterangepicker.css') }}" rel="stylesheet">
     <link href="{{ asset('bower_components/dropzone/dist/dropzone.css') }}" rel="stylesheet">
     <link href="{{ asset('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
@@ -12,7 +11,9 @@
     <link href="{{ asset('bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css') }}" rel="stylesheet">
     <link href="{{ asset('bower_components/slick-carousel/slick/slick.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main5739.css') }}?version=4.5.1" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="{{ asset('assets/select2/css/select2.min.css') }}" rel="stylesheet" />
     <title>@yield('title')</title>
 
     <style type="text/css">
@@ -99,6 +100,7 @@
             text-decoration: none;
             color: rgb(79, 79, 79) !important;
             cursor: pointer;
+            font-size: 12px;
         }
 
         .atext:hover {
@@ -175,6 +177,28 @@
         .dropdown-divider {
             margin: 0px 0;
             /* Adjust the top and bottom margin */
+        }
+
+        .tabtext {
+            font-size: 11px;
+        }
+
+        .btn-default {
+            background-color: #E2E8F0;
+        }
+
+        input[type="file"]::-webkit-file-upload-button {
+            font-size: 10px;
+            margin: 5px;
+            height: 20px;
+            width: 80px;
+        }
+
+        input[type="file"]::file-selector-button {
+            font-size: 11px;
+            padding: 0px;
+            height: 23px;
+            width: 80px;
         }
 
         @media (max-width: 575px) {

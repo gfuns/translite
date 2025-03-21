@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Business\BusinessController;
 use App\Http\Controllers\Business\CommerceController;
+use App\Http\Controllers\Business\SettingsController;
+use App\Http\Controllers\Business\UtilityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,10 +38,16 @@ Route::group([
 
     Route::get('/refunds', [BusinessController::class, 'refunds'])->name('business.refunds');
 
+    Route::get('/disputes', [BusinessController::class, 'disputes'])->name('business.disputes');
+
     Route::get('/customers', [CommerceController::class, 'customers'])->name('business.customers');
 
     Route::get('/invoices', [CommerceController::class, 'invoices'])->name('business.invoices');
 
     Route::get('/payment-links', [CommerceController::class, 'paymentLinks'])->name('business.paymentLinks');
+
+    Route::get('/utilities', [UtilityController::class, 'utilities'])->name('business.utilities');
+
+    Route::get('/settings', [SettingsController::class, 'settings'])->name('business.settings');
 
 });

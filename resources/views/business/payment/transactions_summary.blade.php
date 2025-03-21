@@ -24,11 +24,11 @@
                                         <div class="custombox" style="display: flex; gap: 10px">
                                             <a href="{{ route('business.paymentTrxs') }}?filter=summary"
                                                 class="tabactive">
-                                                <div>Summary</div>
+                                                <div class="tabtext">Summary</div>
                                             </a>
                                             <a href="{{ route('business.paymentTrxs') }}?filter=list"
                                                 class="tabinactive">
-                                                <div>Transaction List</div>
+                                                <div class="tabtext">Transaction List</div>
                                             </a>
                                         </div>
                                     </div>
