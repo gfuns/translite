@@ -464,6 +464,15 @@ input[type="file"]::file-selector-button {
     cursor: pointer;
 }
 
+.plus{
+    border-radius: 8px;
+    border: 1.5px solid #e2e8f0;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
 .password-toggle {
     position: relative;
 }
@@ -554,6 +563,20 @@ input[type="file"]::file-selector-button {
     font-weight: 500;
 }
 
+.labelinfo {
+    padding: 5px 10px;
+    width: 61px;
+    height: 26px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: rgb(7, 101, 255);
+    background: rgb(236, 242, 255);
+    border-radius: 1000px;
+}
+
 .genkey {
     border: 1.5px solid rgb(234, 236, 240);
     border-radius: 6px;
@@ -590,6 +613,248 @@ input[type="file"]::file-selector-button {
 .dropdown-menu-custom a:hover {
     background: #f1f1f1;
 }
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.checkbox-container input {
+    margin-top: 5px;
+    padding: 9px;
+}
+
+.event-title {
+    /* font-weight: bold; */
+}
+
+.event-description {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+    appearance: none;
+    width: 5px;
+    height: 5px;
+    border: 1px solid #6c757d;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Checkmark inside the checkbox */
+.custom-checkbox::after {
+    content: "\2713";
+    /* Unicode checkmark */
+    font-size: 12px;
+    font-weight: bold;
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+.custom-checkbox:checked {
+    background-color: rgb(236, 242, 255);
+    border: 1px solid rgb(7, 101, 255);
+}
+
+.custom-checkbox:checked::after {
+    color: rgb(7, 101, 255);
+}
+
+.code-box {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    /* max-width: 100%; */
+    /* overflow: hidden; */
+    /* word-wrap: break-word; */
+    /* white-space: pre-wrap; */
+    font-family: "Courier New", monospace;
+    position: relative;
+}
+
+.code-box pre {
+    /* margin: 0; */
+    color: white;
+    text-align: left;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+.freq {
+    height: 40px !important;
+}
+
+.freqdate {
+    height: 40px !important;
+}
+
+/* Custom Checkbox */
+.freq-checkbox {
+    margin-top: 24px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #6c757d;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Checkmark inside the checkbox */
+.freq-checkbox::after {
+    content: "\2713";
+    /* Unicode checkmark */
+    font-size: 12px;
+    font-weight: bold;
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+.freq-checkbox:checked {
+    background-color: rgb(236, 242, 255);
+    border: 1px solid rgb(7, 101, 255);
+}
+
+.freq-checkbox:checked::after {
+    color: rgb(7, 101, 255);
+}
+
+.freq-description {
+    margin-top: 6px;
+    font-size: 12px;
+    /* color: #6c757d; */
+}
+
+
+/* Custom Checkbox */
+.def-checkbox {
+    margin-top: 20px;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #6c757d;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.defcheckbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    /* margin-bottom: 15px; */
+}
+
+.defcheckbox-container input {
+    margin-top: 5px;
+    padding: 9px;
+}
+
+/* Checkmark inside the checkbox */
+.def-checkbox::after {
+    content: "\2713";
+    /* Unicode checkmark */
+    font-size: 12px;
+    font-weight: bold;
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+.def-checkbox:checked {
+    background-color: rgb(236, 242, 255);
+    border: 1px solid rgb(7, 101, 255);
+}
+
+.def-checkbox:checked::after {
+    color: rgb(7, 101, 255);
+}
+
+.def-description {
+    margin-top: 6px;
+    font-size: 12px;
+    /* color: #6c757d; */
+}
+
+.banklogo {
+    border-radius: 9999px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    flex-shrink: 0;
+    font-size: var(--avatar-font-size);
+    color: #fff;
+    vertical-align: top;
+    width: 40px;
+    height: 40px;
+    --avatar-border-color: #fff;
+    --avatar-size: 3rem;
+    --avatar-font-size: calc(3rem / 2.5);
+    background: unset;
+    border: 2px solid rgb(234, 236, 240);
+}
+
+.banklogo > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9999px;
+}
+
+.splitValue {
+    height: 38px;
+    min-width: 80px; /* Ensures input box doesn't shrink */
+}
+
+.d-flex {
+    gap: 10px; /* Adds spacing between elements */
+}
+
+.splitType {
+    min-width: 100px; /* Ensures dropdown doesn't shrink */
+}
+
+.splitType + .select2-container .select2-selection--single {
+    height: 38px !important;
+}
+
+/* Target the text inside */
+/* .splitType + .select2-container .select2-selection__rendered {
+    padding-top: 2px;
+    font-size: 14px;
+} */
+
+/* Target the dropdown arrow */
+/* .splitType + .select2-container .select2-selection__arrow {
+    min-width: 120px !important;
+    margin-left: 100px !important;
+    height: 30px !important;
+} */
 
 @media (max-width: 575px) {
     .custombox {

@@ -55,18 +55,21 @@
                                 </div>
 
                                 <div class="col-12 col-md-4">
-                                    <div class="element-box" style="padding: 0px">
-                                        <div class="step-element sb" style="display: flex; gap: 20px; ">
-                                            <div class="slc">
-                                                <img src="{{ asset('images/settlement.svg') }}" class="sl">
-                                            </div>
-                                            <div>
-                                                <span class="sh">Settlement</span><br />
-                                                <span class="sd">Facilitates payments and payouts for your
-                                                    platform.</span>
+                                    <a href="{{ route('business.settings.settlement') }}"
+                                    style="text-decoration: none; color:#3E4B5B">
+                                        <div class="element-box" style="padding: 0px">
+                                            <div class="step-element sb" style="display: flex; gap: 20px; ">
+                                                <div class="slc">
+                                                    <img src="{{ asset('images/settlement.svg') }}" class="sl">
+                                                </div>
+                                                <div>
+                                                    <span class="sh">Settlement</span><br />
+                                                    <span class="sd">Facilitates payments and payouts for your
+                                                        platform.</span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
 
                                 {{-- <div class="col-12 col-md-4">

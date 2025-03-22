@@ -29,6 +29,11 @@ class SettingsController extends Controller
         return view("business.settings.home");
     }
 
+    /**
+     * userProfile
+     *
+     * @return void
+     */
     public function userProfile()
     {
         $google2fa       = app('pragmarx.google2fa');
@@ -42,11 +47,56 @@ class SettingsController extends Controller
         return view("business.settings.profile", compact("google2faSecret", "QRImage"));
     }
 
+    /**
+     * apiKeys
+     *
+     * @return void
+     */
     public function apiKeys()
     {
         $keys      = BusinessKeys::where("business_id", Auth::user()->business->id)->first();
         $publicKey = $keys->public_key;
         $secretKey = Crypt::decrypt($keys->secret_key);
         return view("business.settings.api_keys", compact("publicKey", "secretKey"));
+    }
+
+    /**
+     * webhooks
+     *
+     * @return void
+     */
+    public function webhooks()
+    {
+        return view("business.settings.webhook");
+    }
+
+    /**
+     * settlements
+     *
+     * @return void
+     */
+    public function settlements()
+    {
+        return view("business.settings.settlement");
+    }
+
+    /**
+     * dynamicSettlement
+     *
+     * @return void
+     */
+    public function dynamicSettlement()
+    {
+        return view("business.settings.services");
+    }
+
+    /**
+     * settlementAccounts
+     *
+     * @return void
+     */
+    public function settlementAccounts()
+    {
+        return view("business.settings.accounts");
     }
 }

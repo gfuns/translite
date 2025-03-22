@@ -66,4 +66,10 @@ Route::group([
     Route::get('/settings/keys', [SettingsController::class, 'apiKeys'])->name('business.settings.apiKeys');
 
     Route::get('/settings/webhooks', [SettingsController::class, 'webhooks'])->name('business.settings.webhooks');
+
+    Route::get('/settings/settlement', [SettingsController::class, 'settlements'])->name('business.settings.settlement');
+
+    Route::get('/settings/settlement/services', [SettingsController::class, 'dynamicSettlement'])->name('business.settings.dynamicSettlement');
+
+    Route::get('/settings/settlement/accounts', [SettingsController::class, 'settlementAccounts'])->name('business.settings.settlementAccounts');
 });

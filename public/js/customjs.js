@@ -10,6 +10,75 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function() {
+    $('#frequency').select2({
+        width: '100%', // Ensure it takes full width
+    });
+});
+
+$(document).ready(function() {
+    $('#bank').select2({
+        width: '100%', // Ensure it takes full width
+        templateResult: formatBank,
+        templateSelection: formatBank
+    });
+
+    function formatBank(bank) {
+        if (!bank.id) {
+            return bank.text;
+        }
+
+        var imageUrl = $(bank.element).data('image');
+        if (!imageUrl) {
+            return bank.text;
+        }
+
+        var $bank = $(
+            '<span><img src="' + imageUrl + '" style="width: 20px; height: 20px; margin-right: 10px;"/> ' + bank.text + '</span>'
+        );
+        return $bank;
+    }
+});
+
+
+$(document).ready(function() {
+    function formatBankOption(bank) {
+        if (!bank.id) {
+            return bank.text; // Default text for placeholder
+        }
+
+        var image = $(bank.element).data('image'); // Get image from option
+        var subtext = $(bank.element).data('subtext'); // Get subtext from option
+
+        var $bankOption = $(
+            `<div style="display: flex; align-items: center;">
+                <img src="${image}" style="width: 30px; height: 30px; margin-right: 10px;">
+                <div>
+                    <div>${bank.text}</div>
+                    <div style="font-size: 12px;">${subtext}</div>
+                </div>
+            </div>`
+        );
+
+        return $bankOption;
+    }
+
+    $("#bankSelect").select2({
+        width: '100%', // Ensure it takes full width
+        templateResult: formatBankOption, // For dropdown options
+        templateSelection: formatBankOption, // For selected option
+        dropdownAutoWidth: true,
+        // minimumResultsForSearch: -1 // Removes search bar
+    });
+});
+
+$(document).ready(function() {
+    $('#selcurrency').select2({
+        width: '100%', // Ensure it takes full width
+    });
+});
+
+
 
 $(document).ready(function() {
     $('#dateRange').daterangepicker({
