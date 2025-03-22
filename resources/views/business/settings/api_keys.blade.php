@@ -208,7 +208,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="keydisplay">
+                                            <div class="keydisplay blurred-text">
                                                 <div class="row" style="font-size: 14px; padding-top: 10px">
                                                     <div class="col-12 col-md-6 mb-2">
                                                         <span id="publicKey">{{ $publicKey }}</span>
