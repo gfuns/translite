@@ -72,4 +72,16 @@ Route::group([
     Route::get('/settings/settlement/services', [SettingsController::class, 'dynamicSettlement'])->name('business.settings.dynamicSettlement');
 
     Route::get('/settings/settlement/accounts', [SettingsController::class, 'settlementAccounts'])->name('business.settings.settlementAccounts');
+
+    Route::get('/settings/business/type', [SettingsController::class, 'businessType'])->name('business.settings.businessType');
+
+    Route::get('/settings/business/about', [SettingsController::class, 'businessDetails'])->name('business.settings.about');
+
+    Route::get('/settings/business/documents', [SettingsController::class, 'businessDocuments'])->name('business.settings.bizDocuments');
+
+    Route::get('/settings/business/notifications', [SettingsController::class, 'notificationSettings'])->name('business.settings.notifSettings');
+
+    Route::get('/settings/business/representatives', [SettingsController::class, 'businessRepresentatives'])->name('business.settings.bizReps');
+
+    Route::get('/settings/business/payments', [SettingsController::class, 'paymentSettings'])->name('business.settings.paymentSettings');
 });

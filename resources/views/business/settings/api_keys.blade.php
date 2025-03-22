@@ -24,20 +24,22 @@
                                             <p style="font-size: 12px">Our documentation contains the Libraries, APIs
                                                 you need to integrate TransLite in your projects to start collecting
                                                 payment.</p>
-                                            <button class="btn devbtn">Go To API Docs <svg width="20" height="20"
-                                                    viewBox="0 0 20 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M14.5332 12.1833L16.6665 10.05L14.5332 7.91666"
-                                                        stroke="#0765FF" stroke-width="1.5" stroke-miterlimit="10"
-                                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                                    <path d="M8.13281 10.05H16.6078" stroke="#0765FF" stroke-width="1.5"
-                                                        stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                    <path
-                                                        d="M9.79948 16.6667C6.11615 16.6667 3.13281 14.1667 3.13281 10C3.13281 5.83334 6.11615 3.33334 9.79948 3.33334"
-                                                        stroke="#0765FF" stroke-width="1.5" stroke-miterlimit="10"
-                                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                                </svg></button>
+                                            <a href="" target="_blank" style="text-decoration: none">
+                                                <button class="btn devbtn">Go To API Docs <svg width="20"
+                                                        height="20" viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M14.5332 12.1833L16.6665 10.05L14.5332 7.91666"
+                                                            stroke="#0765FF" stroke-width="1.5" stroke-miterlimit="10"
+                                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M8.13281 10.05H16.6078" stroke="#0765FF"
+                                                            stroke-width="1.5" stroke-miterlimit="10"
+                                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path
+                                                            d="M9.79948 16.6667C6.11615 16.6667 3.13281 14.1667 3.13281 10C3.13281 5.83334 6.11615 3.33334 9.79948 3.33334"
+                                                            stroke="#0765FF" stroke-width="1.5" stroke-miterlimit="10"
+                                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg></button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -190,9 +192,9 @@
                                                     will allow you
                                                     to authenticate API
                                                     requests and should only be used in the live environment.</div>
-                                                <div class="col-12 col-md-4 mb-4 d-md-flex justify-content-end " style="font-size: 12px"
-                                                    data-toggle="modal" data-target="#genKey" data-backdrop="static"
-                                                    data-keyboard="false">
+                                                <div class="col-12 col-md-4 mb-4 d-md-flex justify-content-end "
+                                                    style="font-size: 12px" data-toggle="modal" data-target="#genKey"
+                                                    data-backdrop="static" data-keyboard="false">
                                                     <span class="genkey"> <svg xmlns="http://www.w3.org/2000/svg"
                                                             width="20" height="20" viewBox="0 0 20 20"
                                                             fill="none">

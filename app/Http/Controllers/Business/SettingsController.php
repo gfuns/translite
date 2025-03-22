@@ -99,4 +99,14 @@ class SettingsController extends Controller
     {
         return view("business.settings.accounts");
     }
+
+    /**
+     * businessDetails
+     *
+     * @return void
+     */
+    public function businessDetails()
+    {
+        return view("business.settings.business_details");
+    }
 }
