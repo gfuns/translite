@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
             icon: "success",
             title: "Copied to clipboard!",
             showConfirmButton: false,
-            timer: 2000
+            timer: 3000
         });
 
         // alert("Copied to clipboard!");

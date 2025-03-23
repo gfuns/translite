@@ -121,13 +121,13 @@
     background-color: rgb(247, 144, 9) !important;
 }
 
-.custom-alert-button:hover{
+.custom-alert-button:hover {
     color: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
     background-color: rgb(247, 144, 9) !important;
 }
 
-.custom-alert-text{
+.custom-alert-text {
     font-size: 13px;
 }
 
@@ -1017,9 +1017,8 @@ input[type="file"]::file-selector-button {
     border-color: #22c35e;
 }
 
-
- /* Checkmark (✔) when selected */
- .business-option input[type="radio"]:checked + .radio-indicator::after {
+/* Checkmark (✔) when selected */
+.business-option input[type="radio"]:checked + .radio-indicator::after {
     content: "\2713"; /* Unicode for checkmark */
     font-size: 12px;
     color: white;
@@ -1028,14 +1027,36 @@ input[type="file"]::file-selector-button {
     transform: translate(20%, -5%);
 }
 
-
-.business-option .title{
+.business-option .title {
     font-size: 14px;
 }
 
-.business-option .description{
+.business-option .description {
     font-size: 12px;
     line-height: 18px;
+}
+
+.forcenopadding {
+    margin-left: -10px !important;
+    margin-bottom: -30px !important;
+}
+
+.business-logo {
+    padding: 30px;
+    text-align: center;
+}
+
+.logo-btn {
+    padding: 20px 5px 30px 5px;
+    text-align: center;
+}
+
+.logo-btn button {
+    background: #fff !important;
+    border: 1.5px solid #e2e8f0;
+    /* padding: 8px 20px 8px 20px;
+    border-radius: 8px; */
+    font-size: 13px;
 }
 
 /* Target the text inside */
@@ -1062,7 +1083,12 @@ input[type="file"]::file-selector-button {
         /* padding: 20px; */
     }
 
-    .custom-alert-text{
+    .custom-alert-text {
         font-size: 9.3px;
+    }
+
+    .forcenopadding {
+        margin-left: 0px !important;
+        margin-bottom: 0px !important;
     }
 }

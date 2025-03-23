@@ -4,13 +4,6 @@
 @section('title', env('APP_NAME') . ' | Settings / Business Details')
 <style type="text/css">
     :disabled {
-        background-color: white !important;
-        cursor: not-allowed !important;
-    }
-
-    /* Target the Select2 dropdown when the original select is disabled */
-    .select2-container--disabled .select2-selection {
-        background-color: white !important;
         cursor: not-allowed !important;
     }
 </style>
@@ -25,207 +18,264 @@
                             <span class="os-icon os-icon-alert-circle" style="font-weight:bold"></span>
                             &nbsp;Your Business is under Review!
                         </div>
-                        <div class="element-content">
+                        <div>
+                            <div class="row col-12 col-md-7 nopadding forcenopadding">
+                                <div class="custombox" style="display: flex; gap: 10px">
+                                    <a href="{{ route('business.settings.businessType') }}" class="tabinactive">
+                                        <div class="tabtext">Business Type</div>
+                                    </a>
+                                    <a href="{{ route('business.settings.about') }}" class="tabactive">
+                                        <div class="tabtext">Business Details</div>
+                                    </a>
+                                    <a href="{{ route('business.settings.bizDocuments') }}" class="tabinactive">
+                                        <div class="tabtext">KYC Documents</div>
+                                    </a>
 
-                            <div class="row mt-3">
-                                <div class="col-12 col-md-7 nopadding">
-                                    <div>
-                                        <div class="custombox" style="display: flex; gap: 10px">
-                                            <a href="{{ route('business.settings.businessType') }}" class="tabinactive">
-                                                <div class="tabtext">Business Type</div>
-                                            </a>
-                                            <a href="{{ route('business.settings.about') }}"
-                                                class="tabactive">
-                                                <div class="tabtext">Business Details</div>
-                                            </a>
-                                            <a href="{{ route('business.settings.bizDocuments') }}"
-                                                class="tabinactive">
-                                                <div class="tabtext">KYC Documents</div>
-                                            </a>
+                                    <a href="{{ route('business.settings.notifSettings') }}" class="tabinactive">
+                                        <div class="tabtext">Notifications</div>
+                                    </a>
 
-                                            <a href="{{ route('business.settings.notifSettings') }}"
-                                                class="tabinactive">
-                                                <div class="tabtext">Notifications</div>
-                                            </a>
+                                    <a href="{{ route('business.settings.bizReps') }}" class="tabinactive">
+                                        <div class="tabtext">Representatives</div>
+                                    </a>
 
-                                            <a href="{{ route('business.settings.bizReps') }}"
-                                                class="tabinactive">
-                                                <div class="tabtext">Representatives</div>
-                                            </a>
+                                    <a href="{{ route('business.settings.paymentSettings') }}" class="tabinactive">
+                                        <div class="tabtext">Payment</div>
+                                    </a>
+                                </div>
+                            </div>
 
-                                            <a href="{{ route('business.settings.paymentSettings') }}"
-                                                class="tabinactive">
-                                                <div class="tabtext">Payment</div>
-                                            </a>
+
+                            <div class="element-content">
+                                <div class="row mt-3">
+                                    <div class="col-12 col-md-7">
+                                        <div class="element-box" style="padding: 0px">
+                                            <div class="eb d-flex justify-content-between">
+                                                <h5>Business Details! </h5>
+                                                <div class="pencil" id="editConfiguration"><i
+                                                        class="fas fa-pencil-alt"></i>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="progress-container" style="padding-bottom: 25px">
+                                                <form id="formValidate" method="post" action="">
+                                                    @csrf
+                                                    <div class="row">
+                                                        <div class="form-group col-12 col-md-6">
+                                                            <label for=""> Business Type</label>
+                                                            <select class="form-control" name="businessType" disabled
+                                                                data-error="Business type selected is invalid">
+                                                                <option>Freelancer</option>
+                                                            </select>
+                                                            <div
+                                                                class="help-block form-text with-errors form-control-feedback">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-12 col-md-6">
+                                                            <label for=""> Business Name</label>
+                                                            <input name="businessName" class="form-control"
+                                                                data-error="Business name provided is invalid"
+                                                                placeholder=" Business Name"
+                                                                value="Blu Constellation limited" required="required"
+                                                                type="text" disabled>
+                                                            <div
+                                                                class="help-block form-text with-errors form-control-feedback">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-12 col-md-6">
+                                                            <label for=""> Business Email</label>
+                                                            <input name="businessEmail" class="form-control"
+                                                                data-error="Business email provided is invalid"
+                                                                placeholder=" Business Email"
+                                                                value="hello@blu-constellationltd.com"
+                                                                required="required" type="text" readonly>
+                                                            <div
+                                                                class="help-block form-text with-errors form-control-feedback">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-12 col-md-6">
+                                                            <label for=""> Business Website</label>
+                                                            <input name="businessWebsite" class="form-control"
+                                                                data-error="Business website provided is invalid"
+                                                                placeholder=" Business Website"
+                                                                value="https://blu-constellationltd.com"
+                                                                required="required" type="text" readonly>
+                                                            <div
+                                                                class="help-block form-text with-errors form-control-feedback">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for=""> Business Phone Number</label>
+                                                        <input name="businessPhone" class="form-control"
+                                                            data-error="Business phone number provided is invalid"
+                                                            placeholder=" Business Phone Number" value="08188664322"
+                                                            required="required" type="text" readonly>
+                                                        <div
+                                                            class="help-block form-text with-errors form-control-feedback">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for=""> Business Description</label>
+                                                        <textarea name="businessDescription" class="form-control" data-error="Business description provided is invalid"
+                                                            placeholder=" Business Description" style="resize:none" rows="3" readonly>Information Technology Service Provider</textarea>
+                                                        <div
+                                                            class="help-block form-text with-errors form-control-feedback">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for=""> Business Address</label>
+                                                        <input name="businessAddress" class="form-control"
+                                                            data-error="Business address provided is invalid"
+                                                            placeholder=" Business Address"
+                                                            value="1301 Akin Adesola Street, Victoria Island, Lagos - Nigeria"
+                                                            required="required" type="text" readonly>
+                                                        <div
+                                                            class="help-block form-text with-errors form-control-feedback">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-12 col-md-6">
+                                                            <label for=""> Business Industry</label>
+                                                            <select id="businessIndustry" class="form-control"
+                                                                name="businessIndustry" readonly disabled
+                                                                data-error="Business industry selected is invalid">
+                                                                <option value="Building Services">Building Services
+                                                                </option>
+                                                                <option value="Digital Products" selected>Digital
+                                                                    Products
+                                                                </option>
+                                                                <option value="Education">Education</option>
+                                                                <option value="Entertainment & Recreation">
+                                                                    Entertainment &
+                                                                    Recreation</option>
+                                                                <option value="Financial Services">Financial Services
+                                                                </option>
+                                                                <option value="Food $ Drinks">Food $ Drinks</option>
+                                                                <option value="Medical Services">Medical Services
+                                                                </option>
+                                                                <option value="Membership Organizations">Membership
+                                                                    Organizations</option>
+                                                                <option value="Personal Services">Personal Services
+                                                                </option>
+                                                                <option value="Regulated & Age Restricted Products">
+                                                                    Regulated & Age Restricted Products</option>
+                                                                <option value="Retail">Retail</option>
+                                                                <option value="Transportation">Transportation</option>
+                                                                <option value="Hospitality">Hospitality</option>
+                                                            </select>
+                                                            <div
+                                                                class="help-block form-text with-errors form-control-feedback">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-12 col-md-6">
+                                                            <label for=""> TIN Number</label>
+                                                            <input name="tinNumber" class="form-control"
+                                                                data-error="TIN number provided is invalid"
+                                                                placeholder="  TIN Number" value="21184933-0001"
+                                                                required="required" type="text" readonly>
+                                                            <div
+                                                                class="help-block form-text with-errors form-control-feedback">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-12 col-md-6">
+                                                            <label for=""> Support Email Address</label>
+                                                            <input name="supportEmail" class="form-control"
+                                                                data-error="Support email address provided is invalid"
+                                                                placeholder=" Support Email Address"
+                                                                value="help@blu-constellationltd.com"
+                                                                required="required" type="text" readonly>
+                                                            <div
+                                                                class="help-block form-text with-errors form-control-feedback">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-12 col-md-6">
+                                                            <label for=""> Support Phone Number</label>
+                                                            <input name="supportPhone" class="form-control"
+                                                                data-error="Support phone number provided is invalid"
+                                                                placeholder=" Support Phone Number" value="0818864322"
+                                                                required="required" type="text" readonly>
+                                                            <div
+                                                                class="help-block form-text with-errors form-control-feedback">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-12 col-md-4">
+                                                            <label for=""> Facebook URL</label>
+                                                            <input name="facebookURL" class="form-control"
+                                                                data-error="Facebook URL provided is invalid"
+                                                                placeholder="  Facebook URL" value=""
+                                                                required="required" type="text" readonly>
+                                                            <div
+                                                                class="help-block form-text with-errors form-control-feedback">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-12 col-md-4">
+                                                            <label for=""> Instagram URL</label>
+                                                            <input name="instagramURL" class="form-control"
+                                                                data-error="Instagram URL provided is invalid"
+                                                                placeholder="  Instagram URL" value=""
+                                                                required="required" type="text" readonly>
+                                                            <div
+                                                                class="help-block form-text with-errors form-control-feedback">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-12 col-md-4">
+                                                            <label for=""> X(Formerly Twitter) URL</label>
+                                                            <input name="xURL" class="form-control"
+                                                                data-error="X URL provided is invalid"
+                                                                placeholder="  X(Formerly Twitter) URL" value=""
+                                                                required="required" type="text" readonly>
+                                                            <div
+                                                                class="help-block form-text with-errors form-control-feedback">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="buttons" class="form-buttons-w" style="display: none">
+                                                        <div class="d-flex justify-content-between">
+                                                            <button type="reset" class="btn btn-outline-secondary"
+                                                                id="cancelEdit">Cancel</button>
+                                                            <button type="submit" class="btn btn-primary"
+                                                                style="font-size:12px">Save
+                                                                Changes</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+
                                         </div>
+
+
                                     </div>
+                                    <div class="col-8 col-md-3 order-first order-md-last" >
+                                        <div class="element-box" style="padding: 0px">
+                                            <div>
+                                                <div class="business-logo">
+                                                    <img id="logoPreview" src="{{ asset('noimage.jpeg') }}" class="img-fluid" />
+                                                </div>
 
+                                                <div class="logo-btn">
+                                                    <button class="btn btn-default" type="button" id="changeLogoBtn">Change Logo</button>
+                                                </div>
 
-                                    <div class="element-box" style="padding: 0px">
-                                        <div class="eb d-flex justify-content-between">
-                                            <h5>Business Details! </h5>
-                                            <div class="pencil" id="editConfiguration"><i class="fas fa-pencil-alt"></i>
+                                                {{-- <form id="logoUploadForm" action="{{ route('business.logo.change') }}"
+                                                    method="POST" enctype="multipart/form-data"
+                                                    style="display: none;"> --}}
+                                                    @csrf
+                                                    <input type="file" id="logoInput" name="logo"
+                                                        accept="image/*" style="display: none;">
+                                                {{-- </form> --}}
                                             </div>
                                         </div>
-                                        <hr />
-                                        <div class="progress-container" style="padding-bottom: 25px">
-                                            <form id="formValidate" method="post" action="">
-                                                @csrf
-
-                                                <div class="row"
-                                                    style="font-size: 14px; padding-top: 10px; margin-bottom:7px">
-                                                    <div class="d-flex col-12 col-md-8 mb-2">
-                                                        <div class="banklogo" style="margin-right:20px">
-                                                            <img src="https://nigerianbanks.xyz/logo/first-city-monument-bank.png"
-                                                                class="chakra-avatar__img css-3a5bz2">
-                                                        </div>
-                                                        <div style="margin-right:20px">
-                                                            <strong>Blu Constellation Nigeria Limited</strong><br />
-                                                            <span style="font-size: 12px"> 5915718010</span>
-                                                        </div>
-                                                        <div id="defat">
-                                                            <label class="label labelinfo">Default</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-4 mb-2">
-                                                        <div class="d-flex align-items-center">
-                                                            <!-- Select Field -->
-                                                            <div style="flex: 1;">
-                                                                <select class="splitType select2 form-control"
-                                                                    name="accounts[1][split_type]" disabled>
-                                                                    <option value="Percentage">Percentage</option>
-                                                                    <option value="Fixed">Fixed</option>
-                                                                </select>
-                                                            </div>
-
-                                                            <!-- Input Field -->
-                                                            <div style="flex: 1; margin-left: 0px;">
-                                                                <input type="text" name="accounts[1][split_value]"
-                                                                    class="form-control splitValue" value="100"
-                                                                    disabled />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Default Checkbox -->
-                                                        <div class="defatchk" style="display: none;">
-                                                            <div class="defcheckbox-container mt-2">
-                                                                <input name="accounts[1][default_status]"
-                                                                    class="def-checkbox" type="checkbox" checked
-                                                                    disabled>
-                                                                <div>
-                                                                    <div class="def-description">Set as default</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <hr />
-                                                <div class="row" style="font-size: 14px; padding-top: 10px;">
-                                                    <div class="d-flex col-12 col-md-8 mb-2">
-                                                        <div class="banklogo" style="margin-right:20px">
-                                                            <img src="https://nigerianbanks.xyz/logo/access-bank.png"
-                                                                class="chakra-avatar__img css-3a5bz2">
-                                                        </div>
-                                                        <div style="margin-right:20px">
-                                                            <strong>Blu Constellation Nigeria Limited</strong><br />
-                                                            <span style="font-size: 12px"> 5915718010</span>
-                                                        </div>
-                                                        {{-- <div id="defat">
-                                                            <label class="label labelinfo">Default</label>
-                                                        </div> --}}
-                                                    </div>
-                                                    <div class="col-12 col-md-4 mb-2">
-                                                        <div class="d-flex align-items-center">
-                                                            <!-- Select Field -->
-                                                            <div style="flex: 1;">
-                                                                <select class="splitType select2 form-control"
-                                                                    name="accounts[1][split_type]" disabled>
-                                                                    <option value="Percentage">Percentage</option>
-                                                                    <option value="Fixed">Fixed</option>
-                                                                </select>
-                                                            </div>
-
-                                                            <!-- Input Field -->
-                                                            <div style="flex: 1; margin-left: 0px;">
-                                                                <input type="text" name="accounts[2][split_value]"
-                                                                    class="form-control splitValue" value="0"
-                                                                    disabled />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Default Checkbox -->
-                                                        <div class="defatchk" style="display: none;">
-                                                            <div class="defcheckbox-container mt-2">
-                                                                <input name="accounts[2][default_status]"
-                                                                    class="def-checkbox" type="checkbox" disabled>
-                                                                <div>
-                                                                    <div class="def-description">Set as default</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <hr />
-                                                <div class="mt-5"></div>
-                                                <h6>Settlement Schedule</h6>
-                                                <hr />
-                                                <div>
-                                                    <div class="">
-                                                        <div class="row"
-                                                            style="font-size: 14px; padding-top: 10px">
-                                                            <div class="col-12 col-md-6 mb-2">
-                                                                <span>Frequency</span>
-                                                            </div>
-                                                            <div class="col-12 col-md-6 mb-2">
-                                                                <select id="frequency" name="frequency"
-                                                                    class="freq" disabled>
-                                                                    <option value="Next Day">Next Day</option>
-                                                                    <option value="Weekly">Weekly</option>
-                                                                    <option value="Monthly">Monthly</option>
-                                                                </select>
-                                                                <div class="checkbox-container mt-2">
-                                                                    <input class="freq-checkbox" type="checkbox"
-                                                                        disabled>
-                                                                    <div>
-                                                                        <div class="freq-description">Hold Settlement
-                                                                            Until</div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div id="fixedSetDate" class="" style="display: none">
-                                                        <div class="row"
-                                                            style="font-size: 14px; padding-top: 10px">
-                                                            <div class="col-12 col-md-6 mb-2">
-                                                                <span>Hold Settlement Until</span>
-                                                            </div>
-                                                            <div class="col-12 col-md-6 mb-2">
-                                                                <input name="settlement_date"
-                                                                    class="form-control freqdate" type="date">
-                                                                <span style="font-size:12px">Settlements will be
-                                                                    withheld until the date set above</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="buttons" class="form-buttons-w" style="display: none">
-                                                    <div class="d-flex justify-content-between">
-                                                        <button type="reset" class="btn btn-outline-secondary"
-                                                            id="clearFilters">Cancel</button>
-                                                        <button type="submit" class="btn btn-primary">Save
-                                                            Changes</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-
-
                                     </div>
+
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -233,56 +283,13 @@
             </div>
         </div>
     </div>
-</div>
 
-
-<div aria-hidden="true" aria-labelledby="addSplitAccount" class="modal fade" id="addSplitAccount" role="dialog"
-    tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                    Add account to split configuration
-                </h5>
-                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                    <span aria-hidden="true"> &times;</span>
-                </button>
-            </div>
-            <form method="post" action="">
-                @csrf
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-12 password-toggle">
-                            <div class="form-group">
-                                <label for="">Select Settlement Account</label>
-                                <select id="bankSelect" name="bank" required>
-                                    <option value="">Select Bank</option>
-                                    <option value="1" data-image="https://nigerianbanks.xyz/logo/access-bank.png" data-subtext="2225408265">Osatare Idemudia</option>
-                                    <option value="2" data-image="https://nigerianbanks.xyz/logo/first-bank-of-nigeria.png" data-subtext="3333445566">Justin Odogwu</option>
-                                </select>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-default" data-dismiss="modal" type="button">
-                        Cancel</button>
-                    <button class="btn btn-primary" type="submit" style="font-size: 12px">
-                        Add Account
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 
 
 @endsection
 
 
 @section('customjs')
-<script src="{{ asset('js/settlement.js') }}?version=4.5.0"></script>
+    <script src="{{ asset('js/bizdetails.js') }}?version=4.5.0"></script>
 
 @endsection

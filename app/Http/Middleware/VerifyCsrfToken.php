@@ -11,7 +11,7 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        '/webhook/bankone',
-        '/webhook/translite',
+        '/business/settings/update-logo',
+        // '/webhook/translite',
     ];
 }

@@ -11,6 +11,12 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+    $('#businessIndustry').select2({
+        width: '100%' // Ensure it takes full width
+    });
+});
+
+$(document).ready(function() {
     $('#veridoc').select2({
         width: '100%' // Ensure it takes full width
     });

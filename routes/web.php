@@ -78,6 +78,8 @@ Route::group([
 
     Route::get('/settings/about', [SettingsController::class, 'businessDetails'])->name('business.settings.about');
 
+    Route::post('/settings/update-logo', [SettingsController::class, 'updateLogo'])->name('business.logo.change');
+
     Route::get('/settings/documents', [SettingsController::class, 'businessDocuments'])->name('business.settings.bizDocuments');
 
     Route::get('/settings/notifications', [SettingsController::class, 'notificationSettings'])->name('business.settings.notifSettings');

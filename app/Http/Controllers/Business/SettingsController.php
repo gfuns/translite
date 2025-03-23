@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Business;
 use App\Http\Controllers\Controller;
 use App\Models\BusinessKeys;
 use Auth;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 
 class SettingsController extends Controller
@@ -157,6 +158,33 @@ class SettingsController extends Controller
      */
     public function businessDocuments()
     {
-        return view("business.settings.business_details");
+        return view("business.settings.business_documents");
+    }
+
+    /**
+     * updateLogo
+     *
+     * @param Request request
+     *
+     * @return void
+     */
+    public function updateLogo(Request $request)
+    {
+        $request->validate([
+            'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        if ($request->hasFile('logo')) {
+            // $logoName = time() . '.' . $request->logo->extension();
+            // $request->logo->move(public_path('logos'), $logoName);
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Logo updated successfully!',
+                // 'logo'    => asset('logos/' . $logoName), // Return new logo URL
+            ]);
+        }
+
+        return response()->json(['success' => false, 'message' => 'Failed to upload logo'], 400);
     }
 }
