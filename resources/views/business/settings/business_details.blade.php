@@ -1,7 +1,7 @@
 @extends('business.layouts.app')
 
 @section('content')
-@section('title', env('APP_NAME') . ' | Settings / Settlement')
+@section('title', env('APP_NAME') . ' | Settings / Business Details')
 <style type="text/css">
     :disabled {
         background-color: white !important;
@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="element-wrapper">
-                        <h6 class="element-header">Settings / Settlement</h6>
+                        <h6 class="element-header">Settings / Business Details</h6>
                         <div class="custom-alert fade show custom-alert-primary">
                             <span class="os-icon os-icon-alert-circle" style="font-weight:bold"></span>
                             &nbsp;Your Business is under Review!
@@ -63,12 +63,8 @@
 
                                     <div class="element-box" style="padding: 0px">
                                         <div class="eb d-flex justify-content-between">
-                                            <h5>Split Configuration! </h5>
+                                            <h5>Business Details! </h5>
                                             <div class="pencil" id="editConfiguration"><i class="fas fa-pencil-alt"></i>
-                                            </div>
-                                            <div class="plus" id="addconfig" style="display: none" data-toggle="modal" data-target="#addSplitAccount"
-                                            data-backdrop="static" data-keyboard="false"><i
-                                                    class="far fa-plus-square"></i>
                                             </div>
                                         </div>
                                         <hr />

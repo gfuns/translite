@@ -11,7 +11,25 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+    $('#veridoc').select2({
+        width: '100%' // Ensure it takes full width
+    });
+});
+
+$(document).ready(function() {
+    $('#designation').select2({
+        width: '100%' // Ensure it takes full width
+    });
+});
+
+$(document).ready(function() {
     $('#frequency').select2({
+        width: '100%', // Ensure it takes full width
+    });
+});
+
+$(document).ready(function() {
+    $('#currency').select2({
         width: '100%', // Ensure it takes full width
     });
 });
@@ -112,7 +130,11 @@ function closeOffcanvas() {
     }, 300); // Adjust timing to match CSS transition
 }
 
-
+function displayFileName(input) {
+    if (input.files.length > 0) {
+        input.nextElementSibling.textContent = input.files[0].name;
+    }
+}
 
 document.getElementById("dropdownToggle").addEventListener("click", function(event) {
     event.preventDefault();

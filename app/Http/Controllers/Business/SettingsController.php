@@ -109,4 +109,54 @@ class SettingsController extends Controller
     {
         return view("business.settings.business_details");
     }
+
+    /**
+     * notificationSettings
+     *
+     * @return void
+     */
+    public function notificationSettings()
+    {
+        return view("business.settings.notifications");
+    }
+
+    /**
+     * businessRepresentatives
+     *
+     * @return void
+     */
+    public function businessRepresentatives()
+    {
+        return view("business.settings.representatives");
+    }
+
+    /**
+     * paymentSettings
+     *
+     * @return void
+     */
+    public function paymentSettings()
+    {
+        return view("business.settings.payment");
+    }
+
+    /**
+     * businessType
+     *
+     * @return void
+     */
+    public function businessType()
+    {
+        return view("business.settings.business_type");
+    }
+
+    /**
+     * businessDocuments
+     *
+     * @return void
+     */
+    public function businessDocuments()
+    {
+        return view("business.settings.business_details");
+    }
 }

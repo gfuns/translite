@@ -20,17 +20,6 @@
     <title>@yield('title')</title>
 
     <style type="text/css">
-        #bankSelect+.select2-container--default .select2-selection--single {
-            /* display: flex; */
-            /* align-items: center; */
-            height: auto !important;
-            min-height: 45px;
-        }
 
-        .blurred-text {
-    filter: blur(5px);
-    user-select: none; /* Prevent selection */
-    pointer-events: none; /* Prevent interaction */
-}
     </style>
 </head>

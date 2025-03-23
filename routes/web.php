@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Business\BusinessController;
 use App\Http\Controllers\Business\CommerceController;
+use App\Http\Controllers\Business\KYCController;
 use App\Http\Controllers\Business\LogsController;
 use App\Http\Controllers\Business\PaymentController;
 use App\Http\Controllers\Business\POSController;
@@ -73,15 +74,17 @@ Route::group([
 
     Route::get('/settings/settlement/accounts', [SettingsController::class, 'settlementAccounts'])->name('business.settings.settlementAccounts');
 
-    Route::get('/settings/business/type', [SettingsController::class, 'businessType'])->name('business.settings.businessType');
+    Route::get('/settings/type', [SettingsController::class, 'businessType'])->name('business.settings.businessType');
 
-    Route::get('/settings/business/about', [SettingsController::class, 'businessDetails'])->name('business.settings.about');
+    Route::get('/settings/about', [SettingsController::class, 'businessDetails'])->name('business.settings.about');
 
-    Route::get('/settings/business/documents', [SettingsController::class, 'businessDocuments'])->name('business.settings.bizDocuments');
+    Route::get('/settings/documents', [SettingsController::class, 'businessDocuments'])->name('business.settings.bizDocuments');
 
-    Route::get('/settings/business/notifications', [SettingsController::class, 'notificationSettings'])->name('business.settings.notifSettings');
+    Route::get('/settings/notifications', [SettingsController::class, 'notificationSettings'])->name('business.settings.notifSettings');
 
-    Route::get('/settings/business/representatives', [SettingsController::class, 'businessRepresentatives'])->name('business.settings.bizReps');
+    Route::get('/settings/representatives', [SettingsController::class, 'businessRepresentatives'])->name('business.settings.bizReps');
 
-    Route::get('/settings/business/payments', [SettingsController::class, 'paymentSettings'])->name('business.settings.paymentSettings');
+    Route::get('/settings/payments', [SettingsController::class, 'paymentSettings'])->name('business.settings.paymentSettings');
+
+    Route::get('/kyc/application', [KYCController::class, 'kycApplication'])->name('business.kyc.apply');
 });

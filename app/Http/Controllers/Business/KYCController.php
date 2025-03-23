@@ -14,4 +14,14 @@ class KYCController extends Controller
     {
         $this->middleware('auth');
     }
+
+    /**
+     * kycApplication
+     *
+     * @return void
+     */
+    public function kycApplication()
+    {
+        return view("business.kyc.apply");
+    }
 }
