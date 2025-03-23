@@ -1059,6 +1059,84 @@ input[type="file"]::file-selector-button {
     font-size: 13px;
 }
 
+.upload-box {
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    font-size: 12px;
+    /* text-align: center; */
+    cursor: pointer;
+    color: rgb(102, 112, 133);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Disabled styling */
+.uploaded-file.disabled {
+    opacity: 0.7;  /* Reduce visibility */
+    cursor: not-allowed; /* Show disabled cursor */
+    pointer-events: none; /* Prevent interactions */
+}
+
+.upload-box:hover {
+    border-color: #007bff;
+}
+
+.uploaded-file {
+    border: 1px solid #e2e8f0;
+    padding: 23px 0px 23px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    color: rgb(102, 112, 133);
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+
+    /* align-items: center;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px; */
+}
+
+.uploaded-file img {
+    width: 40px;
+    height: 40px;
+}
+
+.warning-text {
+    color: rgb(230, 127, 50);
+}
+
+.instruct {
+    color: rgb(7, 101, 255);
+}
+
+.title-bold {
+    font-size: 13px;
+}
+
+.previewfname {
+    display: block;
+    width: 150px;
+    /* Set a fixed width */
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+    overflow: hidden;
+    /* Hide the overflowing text */
+    text-overflow: ellipsis;
+    /* Add ellipsis (...) */
+}
+
+.previewfsize {
+    display: block;
+}
+
+.upload-box:has(input[disabled]) {
+    pointer-events: none;
+    opacity: 0.7;
+    /* cursor: not-allowed; */
+}
+
 /* Target the text inside */
 /* .splitType + .select2-container .select2-selection__rendered {
     padding-top: 2px;
