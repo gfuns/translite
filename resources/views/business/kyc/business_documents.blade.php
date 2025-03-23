@@ -24,21 +24,25 @@
         <div class="page-ath-content customPageContent">
             <div class="page-ath-form center-div">
                 <div class="progress-container">
-                    <div class="mb-5 mobileDoLater ">
-                        <a href="{{ route('business.dashboard') }}" class="dolater">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                fill="none">
-                                <path
-                                    d="M7.4165 6.29922C7.67484 3.29922 9.2165 2.07422 12.5915 2.07422H12.6998C16.4248 2.07422 17.9165 3.56589 17.9165 7.29089V12.7242C17.9165 16.4492 16.4248 17.9409 12.6998 17.9409H12.5915C9.2415 17.9409 7.69984 16.7326 7.42484 13.7826"
-                                    stroke="#667085" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
-                                </path>
-                                <path d="M12.4999 10H3.0166" stroke="#667085" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                <path d="M4.87516 7.20898L2.0835 10.0007L4.87516 12.7923" stroke="#667085"
-                                    stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                            <span style="margin-left: 10px">I'll do this later.</span>
-                        </a>
+                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <a href="{{ route('business.kyc.apply') }}?current=4"><div class="btn-back mb-4"><i class="fas fa-angle-left"></i> &nbsp;Previous Step</div></a>
+                        <div class="mb-5 mobileDoLater ">
+                            <a href="{{ route('business.dashboard') }}" class="dolater">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M7.4165 6.29922C7.67484 3.29922 9.2165 2.07422 12.5915 2.07422H12.6998C16.4248 2.07422 17.9165 3.56589 17.9165 7.29089V12.7242C17.9165 16.4492 16.4248 17.9409 12.6998 17.9409H12.5915C9.2415 17.9409 7.69984 16.7326 7.42484 13.7826"
+                                        stroke="#667085" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                    </path>
+                                    <path d="M12.4999 10H3.0166" stroke="#667085" stroke-width="1.25"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M4.87516 7.20898L2.0835 10.0007L4.87516 12.7923" stroke="#667085"
+                                        stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                <span style="margin-left: 10px">I'll do this later.</span>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="stepDisplay">Step 5 of 8</div>

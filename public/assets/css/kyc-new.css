@@ -126,7 +126,7 @@
 .progress-container {
     position: relative;
     width: 550px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .stepDisplay {
@@ -229,8 +229,15 @@ a {
 }
 
 .btn-back {
-    background: #f8f9fa;
+    background: #fff;
     border: 1px solid #dee2e6;
+    color: rgb(71, 84, 103);
+    /* width: 10px !important; */
+    min-width: 80px;
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-weight: 500;
 }
 
 .radio-group {
@@ -313,6 +320,7 @@ a {
 @media (max-width: 575px) {
     .mobileDoLater {
         display: block;
+        margin-top: 20px;
     }
 
     .progress-container {
@@ -331,5 +339,10 @@ a {
 
     .agree-box::after {
         transform: translate(40%, 3%);
+    }
+
+    .btn-back {
+        padding: 5px 18px !important;
+        min-width: 110px;
     }
 }
