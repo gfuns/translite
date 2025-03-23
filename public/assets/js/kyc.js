@@ -29,6 +29,19 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function() {
+    $(".page-ath-form").css({
+        "opacity": "0",
+        "transform": "translateX(100%)"
+    });
+
+    $(".page-ath-form").animate({
+        opacity: 1,
+        marginLeft: "0"
+    }, 500);
+});
+
+
 document.getElementById("changeLogoBtn").addEventListener("click", function() {
     document.getElementById("logoInput").click(); // Trigger file input
 });

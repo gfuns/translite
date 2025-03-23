@@ -157,6 +157,22 @@
     overflow-y: auto; /* Enable vertical scrolling */
     max-height: 150vh; /* Prevents it from exceeding viewport */
     margin-bottom: 20px;
+
+    position: relative;
+    transform: translateX(100%); /* Start off-screen */
+    opacity: 0;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .page-ath-gfx {
