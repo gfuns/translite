@@ -226,11 +226,6 @@
         </div>
     </div>
 
-    <script>
-        var base_url = "https://app.tokenlite.net",
-            csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-            layouts_style = "modern";
-    </script>
     <script src="assets/js/jquery.bundle.js?ver=20241116180"></script>
     <script src="assets/js/script.js?ver=20241116180"></script>
     <script type="text/javascript">
