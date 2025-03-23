@@ -24,6 +24,23 @@
         <div class="page-ath-content customPageContent">
             <div class="page-ath-form center-div">
                 <div class="progress-container">
+                    <div class="mb-5 mobileDoLater ">
+                        <a href="{{ route('business.dashboard') }}" class="dolater">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7.4165 6.29922C7.67484 3.29922 9.2165 2.07422 12.5915 2.07422H12.6998C16.4248 2.07422 17.9165 3.56589 17.9165 7.29089V12.7242C17.9165 16.4492 16.4248 17.9409 12.6998 17.9409H12.5915C9.2415 17.9409 7.69984 16.7326 7.42484 13.7826"
+                                    stroke="#667085" stroke-width="1.25" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M12.4999 10H3.0166" stroke="#667085" stroke-width="1.25"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M4.87516 7.20898L2.0835 10.0007L4.87516 12.7923" stroke="#667085"
+                                    stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <span style="margin-left: 10px">I'll do this later.</span>
+                        </a>
+                    </div>
+
                     <div class="stepDisplay">Step 1 of 8</div>
                     <div class="processHeading">Which best describes your business?</div>
                     <p class="processDescription">Depending on your business type, a few necessary documents will be
@@ -189,8 +206,10 @@
                         </div>
 
                         <div class="center-button">
-                            <button type="submit" class="btn btn-primary">Continue with selected account
+                            <a href="{{ route("business.kyc.apply") }}?current=2">
+                                <button type="button" class="btn btn-primary">Continue with selected account
                                 type</button>
+                            </a>
                         </div>
 
                     </form>
@@ -203,12 +222,12 @@
         <div class="page-ath-gfx">
             <div class="w-100 d-flex ">
                 <div class="col-12">
-                    <div>
+                    <div class="mt-5">
                         <img class="page-ath-logo-img" src="images/logos.png" alt="TransLite Logo">
                     </div>
 
 
-                    <div class="mt-5 mb-5">
+                    <div class="kycinstruction">
                         <h5><span class="kycheading">Set up your business account</span></h5>
                         <p class="kycheadingsmall">Activate your business payments in quick and simple steps</p>
                     </div>
@@ -230,11 +249,12 @@
                         </a>
                     </div>
 
-                    <div class="mb-5">&nbsp;</div>
-                    <div class="mb-5">&nbsp;</div>
-                    <div class="mb-5">&nbsp;</div>
-                    <div class="mb-5">&nbsp;</div>
-                    <div class="mb-5">&nbsp;</div>
+
+
+                    <div class="copyright">
+                        <span style="margin-right: 10px">&copy; {{ date("Y") }} TransLite</span> |
+                        <span style="margin-left: 10px"><a href="#" target="_blank">Terms & Conditions</a></span>
+                    </div>
 
                 </div>
             </div>

@@ -22,6 +22,10 @@
     text-decoration: none;
 }
 
+.mobileDoLater {
+    display: none;
+}
+
 .center-div {
     display: flex;
     justify-content: center;
@@ -96,6 +100,11 @@
     margin-bottom: -30px !important;
 }
 
+.nopadding {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
 .business-logo {
     padding: 30px;
     text-align: center;
@@ -158,4 +167,75 @@
     background-color: rgb(242, 244, 247);
     position: sticky;
     top: 0px;
+}
+
+.kycinstruction {
+    height: 30%;
+    margin-top: 100px;
+}
+.copyright {
+    font-size: 13px;
+    position: absolute;
+    bottom: 20px; /* 20px margin from the bottom */
+}
+
+:disabled {
+    background-color: rgb(249, 250, 251) !important;
+    border-color: rgb(208, 213, 221);
+    /* color: rgb(169, 169, 170); */
+    cursor: not-allowed;
+}
+
+.form-control {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.skip {
+    /* color: black; */
+    font-size: 13px;
+}
+
+.logobox{
+    background-color: rgb(236, 242, 255);
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 20px !important;
+    margin-left: 10px !important;
+}
+
+.business-logo {
+    padding: 10px;
+    text-align: center;
+}
+
+.logo-btn {
+    padding: 10px;
+    text-align: center;
+}
+
+.logo-btn button {
+    background: #fff !important;
+    border: 1.5px solid #e2e8f0;
+    padding: 0px 0px 0px 0px;
+    border-radius: 8px;
+    font-size: 12px;
+    color:black;
+}
+
+@media (max-width: 575px) {
+    .mobileDoLater {
+        display: block;
+    }
+
+    .progress-container {
+        margin-top: 10px;
+    }
+
+    .logobox{
+        margin-left: 20px !important;
+    }
 }
