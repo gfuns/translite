@@ -13,7 +13,12 @@
     <link rel="stylesheet" href="{{ asset('assets/css/kyc-new.css') }}?ver=20241116180">
 
     <style>
-
+        :disabled {
+            background-color: rgb(249, 250, 251) !important;
+            border-color: rgb(208, 213, 221);
+            /* color: rgb(169, 169, 170); */
+            cursor: not-allowed;
+        }
     </style>
 
 </head>
@@ -92,7 +97,8 @@
                         </a>
 
                         <div class="center-button">
-                            <a href="{{ route('business.kyc.apply') }}?current=3" class="skip">Skip to Business Information <i class="fas fa-long-arrow-alt-right"></i></a>
+                            <a href="{{ route('business.kyc.apply') }}?current=3" class="skip">Skip to Business
+                                Information <i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
 
 

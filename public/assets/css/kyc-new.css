@@ -179,13 +179,6 @@
     bottom: 20px; /* 20px margin from the bottom */
 }
 
-:disabled {
-    background-color: rgb(249, 250, 251) !important;
-    border-color: rgb(208, 213, 221);
-    /* color: rgb(169, 169, 170); */
-    cursor: not-allowed;
-}
-
 .form-control {
     font-size: 12px;
 }
@@ -199,7 +192,7 @@ a {
     font-size: 13px;
 }
 
-.logobox{
+.logobox {
     background-color: rgb(236, 242, 255);
     border: 1.5px solid #e2e8f0;
     border-radius: 8px;
@@ -223,7 +216,98 @@ a {
     padding: 0px 0px 0px 0px;
     border-radius: 8px;
     font-size: 12px;
-    color:black;
+    color: black;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-back {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+.alert-note {
+    background: rgb(220 252 231);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    color: rgb(21 128 61);
+}
+
+.disabled-btn {
+    background: #e0e0e0;
+    cursor: not-allowed;
+}
+
+.radio-btn {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.radio-btn.active {
+    border-color: #0d6efd;
+    background: #eaf1ff;
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+.agree-box {
+    appearance: none;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #6c757d;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Checkmark inside the checkbox */
+.agree-box::after {
+    content: "\2713";
+    /* Unicode checkmark */
+    font-size: 12px;
+    font-weight: bold;
+    color: transparent;
+    transition: color 0.3s ease;
+    position: absolute;
+    transform: translate(40%, -3%);
+}
+
+.agree-box:checked {
+    background-color: rgb(236, 242, 255);
+    border: 1px solid rgb(7, 101, 255);
+}
+
+.agree-box:checked::after {
+    color: rgb(7, 101, 255);
 }
 
 @media (max-width: 575px) {
@@ -235,7 +319,17 @@ a {
         margin-top: 10px;
     }
 
-    .logobox{
+    .logobox {
         margin-left: 20px !important;
+    }
+
+    .agree-box {
+        width: 30px !important;
+        height: 20px !important;
+        margin-right: 10px;
+    }
+
+    .agree-box::after {
+        transform: translate(40%, 3%);
     }
 }
