@@ -465,6 +465,59 @@ a {
     color: #64748b;
 }
 
+.document-item {
+    display: flex;
+    margin-bottom: 10px;
+    min-height: 40px;
+    padding: 10px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 5px;
+    background: rgb(245, 246, 248);
+    flex: 1 1 0%;
+    width: 100%;
+    font-size: 12px;
+    cursor: pointer;
+    color: black;
+}
+
+.tool-tip {
+    margin-left: 10px;
+}
+
+.document-item.uploaded {
+    background-color: rgb(236, 242, 255);
+}
+
+.optional {
+    color: #f4a261;
+    font-weight: bold;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.document-item i {
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.delete-icon {
+    color: red;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.folder-title {
+    margin-left: 15px;
+    width: 100%;
+}
+
+.eye-icon {
+    margin-right: 10px;
+}
+
 @media (max-width: 575px) {
     .mobileDoLater {
         display: block;

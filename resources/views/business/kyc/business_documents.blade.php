@@ -13,66 +13,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/kyc-new.css') }}?ver=20241116180">
 
     <style>
-        .document-item {
-            display: flex;
-            margin-bottom: 10px;
-            min-height: 40px;
-            padding: 10px;
-            -webkit-box-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: center;
-            align-items: center;
-            border-radius: 5px;
-            background: rgb(245, 246, 248);
-            flex: 1 1 0%;
-            width: 100%;
-            font-size: 12px;
-            cursor: pointer;
-            color: black;
-            /* font-weight: bold; */
-            /* display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px;
-            border-radius: 5px;
-            background: #f8f9fa;
-            margin-bottom: 10px;
-            transition: 0.3s; */
-        }
 
-        .tool-tip {
-            margin-left: 10px;
-        }
-
-        .document-item.uploaded {
-            background-color: rgb(236, 242, 255);
-        }
-
-        .optional {
-            color: #f4a261;
-            font-weight: bold;
-            font-size: 10px;
-            margin-left: 5px;
-        }
-
-        .document-item i {
-            color: #6c757d;
-            cursor: pointer;
-        }
-
-        .delete-icon {
-            color: red;
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
-
-        .folder-title {
-            margin-left: 15px;
-        }
-
-        .eye-icon {
-            margin-right: 10px;
-        }
     </style>
 
 </head>
@@ -172,7 +113,8 @@
                                         </svg>
                                         <span id="memorandum-doc" class="folder-title">Memorandum of Association</span>
                                         <span class="tool-tip" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Memorandum of Association."><i class="fas fa-info-circle"></i></span>
+                                            title="Memorandum of Association."><i
+                                                class="fas fa-info-circle"></i></span>
 
                                     </div>
                                     <div>
@@ -209,8 +151,10 @@
                                         <span id="cac7-doc" class="folder-title">CAC 7 (Registered Directors) or CAC
                                             Status
                                             Report</span>
-                                        <span class="tool-tip" data-bs-toggle="tooltip" data-bs-placement="top" title="CAC 7 (Registered Directors) or CAC Status
-                                        Report"><i class="fas fa-info-circle"></i></span>
+                                        <span class="tool-tip" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="CAC 7 (Registered Directors) or CAC Status
+                                        Report"><i
+                                                class="fas fa-info-circle"></i></span>
 
                                     </div>
                                     <div>
@@ -243,8 +187,11 @@
                                                 d="M13.9263 4.36016C13.6397 4.1535 13.313 4.00016 12.9597 3.9135C12.7263 3.84683 12.473 3.8135 12.2197 3.8135H9.73967C9.35301 3.8135 9.32634 3.7735 9.11967 3.50016L8.18634 2.26016C7.75301 1.68683 7.41301 1.3335 6.32634 1.3335H4.77967C3.15301 1.3335 1.83301 2.6535 1.83301 4.28016V11.7202C1.83301 13.3468 3.15301 14.6668 4.77967 14.6668H12.2197C13.8463 14.6668 15.1663 13.3468 15.1663 11.7202V6.76016C15.1663 5.76683 14.6797 4.8935 13.9263 4.36016ZM10.053 10.6668H6.94634C6.68634 10.6668 6.47967 10.4602 6.47967 10.2002C6.47967 9.94683 6.68634 9.7335 6.94634 9.7335H10.0463C10.2997 9.7335 10.513 9.94683 10.513 10.2002C10.513 10.4602 10.3063 10.6668 10.053 10.6668Z"
                                                 fill="#98A2B3"></path>
                                         </svg>
-                                        <span id="cac2-doc" class="folder-title">CAC 2 (Registered Shareholders) or CAC Status Report</span>
-                                        <span class="tool-tip" data-bs-toggle="tooltip" data-bs-placement="top" title="CAC 2 (Registered Shareholders) or CAC Status Report"><i class="fas fa-info-circle"></i></span>
+                                        <span id="cac2-doc" class="folder-title">CAC 2 (Registered Shareholders) or
+                                            CAC Status Report</span>
+                                        <span class="tool-tip" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="CAC 2 (Registered Shareholders) or CAC Status Report"><i
+                                                class="fas fa-info-circle"></i></span>
 
                                     </div>
                                     <div>
@@ -279,7 +226,9 @@
                                         </svg>
                                         <span id="tin-doc" class="folder-title">Evidence of Tax Identification
                                             Number</span>
-                                        <span class="tool-tip" data-bs-toggle="tooltip" data-bs-placement="top" title="Evidence of Tax Identification Number"><i class="fas fa-info-circle"></i></span>
+                                        <span class="tool-tip" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Evidence of Tax Identification Number"><i
+                                                class="fas fa-info-circle"></i></span>
 
                                     </div>
                                     <div>
@@ -311,7 +260,7 @@
                                         </svg>
                                         <span id="tin-doc" class="folder-title">Proof of Address</span>
                                         <span class="tool-tip" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Proof of Address"><i class="fas fa-info-circle"></i></span>
+                                            title="Proof of Address"><i class="fas fa-info-circle"></i></span>
 
                                     </div>
                                     <div>
@@ -359,7 +308,8 @@
                                         </svg>
                                         <span id="license-doc" class="folder-title">Business License <span
                                                 class="optional">(Optional)</span></span>
-                                        <span class="tool-tip" data-bs-toggle="tooltip" data-bs-placement="top" title="Business License"><i class="fas fa-info-circle"></i></span>
+                                        <span class="tool-tip" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Business License"><i class="fas fa-info-circle"></i></span>
 
                                     </div>
                                     <div>
@@ -391,7 +341,7 @@
                                         </svg>
                                         <span id="tin-doc" class="folder-title">Other Documents</span>
                                         <span class="tool-tip" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Other Documents"><i class="fas fa-info-circle"></i></span>
+                                            title="Other Documents"><i class="fas fa-info-circle"></i></span>
 
                                     </div>
                                     <div>
@@ -515,6 +465,21 @@
                 return new bootstrap.Tooltip(tooltipTriggerEl);
             });
         });
+
+        function truncateTextOnMobile() {
+            if (window.innerWidth <= 575) { // Only for mobile screens
+                document.querySelectorAll(".folder-title").forEach(function(element) {
+                    let text = element.innerText.trim();
+                    if (text.length > 40) {
+                        element.innerText = text.substring(0, 40) + "...";
+                    }
+                });
+            }
+        }
+
+        // Run on page load and on window resize
+        document.addEventListener("DOMContentLoaded", truncateTextOnMobile);
+        window.addEventListener("resize", truncateTextOnMobile);
     </script>
 
 </body>
