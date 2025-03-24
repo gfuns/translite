@@ -10,9 +10,20 @@
                 <div class="col-sm-12">
                     <div class="element-wrapper">
                         <h6 class="element-header">Dashboard</h6>
-                        <div class="custom-alert fade show custom-alert-primary">
-                            <span class="os-icon os-icon-alert-circle" style="font-weight:bold"></span>
-                            &nbsp;Your Business is under Review!
+                        <div
+                            class="custom-alert fade show custom-alert-warning d-flex justify-content-between align-items-center flex-wrap gap-3">
+                            <div>
+                                <span class="os-icon os-icon-alert-circle custom-alert-text"
+                                    style="font-weight:bold;"></span>
+                                &nbsp;<span class="custom-alert-text">Activate your business to start receiving payments
+                                    with TransLite!</span>
+                            </div>
+
+                            <div>
+                                <a href="{{ route('business.kyc.apply') }}"> <button
+                                        class="btn btn-default custom-alert-button"
+                                        style="font-size: 12px">Activate</button></a>
+                            </div>
                         </div>
 
                         <div class="element-content">
@@ -63,7 +74,7 @@
                                             </div>
 
                                             <div class="progress-step">
-                                                <div class="progress-icon completed">✔</div>
+                                                <div class="progress-icon current">⏳</div>
                                                 <div class="step-element" style="display: flex; gap: 20px; ">
                                                     <div>
                                                         <svg width="30" height="30" viewBox="0 0 30 30"
@@ -96,7 +107,7 @@
                                             </div>
 
                                             <div class="progress-step">
-                                                <div class="progress-icon current">⏳</div>
+                                                <div class="progress-icon pending">●</div>
                                                 <div class="step-element" style="display: flex; gap: 20px; ">
                                                     <div>
                                                         <svg width="30" height="30" viewBox="0 0 30 30"

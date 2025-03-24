@@ -23,7 +23,7 @@ class BusinessController extends Controller
      */
     public function dashboard()
     {
-        return view("business.dashboard_main");
+        return view("business.dashboard");
     }
 
 }
