@@ -1,4 +1,22 @@
 $(document).ready(function() {
+    $('#veridoc').select2({
+        width: '100%' // Ensure it takes full width
+    });
+});
+
+$(document).ready(function() {
+    $('#designation').select2({
+        width: '100%' // Ensure it takes full width
+    });
+});
+
+$(document).ready(function() {
+    $('#representative').select2({
+        width: '100%' // Ensure it takes full width
+    });
+});
+
+$(document).ready(function() {
     $('#currency').select2({
         width: '100%', // Ensure it takes full width
     });

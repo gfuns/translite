@@ -333,6 +333,138 @@ a {
     color: rgb(7, 101, 255);
 }
 
+.repsRole {
+    background-color: rgb(236, 242, 255);
+    padding: 2px 8px;
+    margin-left: 15px;
+    border-radius: 100px;
+    color: rgb(7, 101, 255);
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.business-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px;
+    background: white;
+}
+
+.previewfname {
+    display: block;
+    width: 150px;
+    /* Set a fixed width */
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+    overflow: hidden;
+    /* Hide the overflowing text */
+    text-overflow: ellipsis;
+    /* Add ellipsis (...) */
+}
+
+.file-box {
+    display: flex;
+    align-items: center;
+    background-color: rgb(236, 253, 243);
+    padding: 10px;
+    border-radius: 6px;
+    gap: 10px;
+    height: 35px;
+    border: 0.2px solid rgb(29, 173, 92);
+}
+
+.viewFile {
+    margin-left: auto;
+}
+
+.add-rep {
+    color: blue;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.disfield {
+    padding-bottom: 0px;
+    border-bottom: 1px solid rgb(234, 236, 240);
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-link {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.tab-link.active {
+    font-weight: bold;
+    border-bottom: 1.5px solid #007bff;
+    color: #007bff;
+}
+
+/* Tab Content */
+.tab-panel {
+    display: none;
+    padding: 15px 0;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.formalabel {
+    font-size: 13px;
+    color: black;
+    /* font-weight: bold; */
+}
+
+/* Custom file upload */
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 20px;
+    /* width: 180px; */
+    height: 50px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 11px;
+    color: #64748b;
+}
+
+.custom-file-upload:hover {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.hidden-input {
+    display: none;
+}
+
+.file-name {
+    font-size: 11px;
+    margin-top: 5px;
+    color: #64748b;
+}
+
 @media (max-width: 575px) {
     .mobileDoLater {
         display: block;
@@ -361,4 +493,11 @@ a {
         padding: 5px 18px !important;
         min-width: 110px;
     }
+
+    .disfield {
+        padding-bottom: 10px;
+        /* border-bottom: 1px solid rgb(234, 236, 240); */
+    }
+
+
 }
