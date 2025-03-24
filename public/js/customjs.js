@@ -29,6 +29,12 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+    $('#representative').select2({
+        width: '100%' // Ensure it takes full width
+    });
+});
+
+$(document).ready(function() {
     $('#frequency').select2({
         width: '100%', // Ensure it takes full width
     });

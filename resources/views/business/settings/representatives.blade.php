@@ -100,112 +100,262 @@
     </div>
 </div>
 
-<div aria-hidden="true" aria-labelledby="addRep" class="modal fade" id="addRep" role="dialog" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                    Add new business representative
-                </h5>
-                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                    <span aria-hidden="true"> &times;</span>
-                </button>
-            </div>
-            <form method="post" action="">
-                @csrf
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="">Bank Verification Number (BVN)</label>
-                                <input type="text" name="BVN" value=""
-                                    placeholder="Bank Verification Number" class="form-control" required />
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="">Designation</label>
-                                <select id="designation" name="currency" required>
-                                    <option value="">Select Designation</option>
-                                    <option value="Business Owner">Business Owner</option>
-                                    <option value="Authorized Signatory">Authorized Signatory</option>
-                                    <option value="Director">Director</option>
-                                    <option value="Director & Shareholder">Director & Shareholder</option>
-                                    <option value="Shareholder">Shareholder</option>
-                                    <option value="Member">Member</option>
-                                </select>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="">Verification Document</label>
-                                <select id="veridoc" name="bank" required>
-                                    <option value="">Select Document Type</option>
-                                    <option value="Driver License">Driver License</option>
-                                    <option value="Permanent Voter Card (PVC)">Permanent Voter Card (PVC)</option>
-                                    <option value="National Identity Card">National Identity Card</option>
-                                    <option value="International Passport">International Passport</option>
-                                    <option value="Birth Certificate">Birth Certificate</option>
-                                    <option value="Resident Permit">Resident Permit</option>
-                                </select>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="">Upload <span id="seldoc"></span></label>
-                                <div class="file-upload-container">
-                                    <label class="file-upload">
-                                        <span class="upload-btn"><i class="fa fa-upload"></i> Upload</span>
-                                        <input type="file" name="verification_document" hidden
-                                            onchange="displayFileName(this)">
-                                        <span class="upload-text">Click to upload</span>
-                                    </label>
-                                </div>
-                                {{--
-                                <input type="file" name="account_number" value="" placeholder="Upload Document"
-                                    class="form-control" required /> --}}
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="">Passport Photograph</label>
-                                <div class="file-upload-container">
-                                    <label class="file-upload">
-                                        <span class="upload-btn"><i class="fa fa-upload"></i> Upload</span>
-                                        <input type="file" name="passport" hidden
-                                            onchange="displayFileName(this)">
-                                        <span class="upload-text">Click to upload</span>
-                                    </label>
-                                </div>
-
-                                {{-- <input type="file" name="passport" value="" placeholder="Upload Passport"
-                                    class="form-control" required /> --}}
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-default" data-dismiss="modal" type="button">Cancel</button>
-                    <button class="btn btn-primary" type="submit" style="font-size:12px">Add Representative</button>
-                </div>
-            </form>
+<div aria-hidden="true" aria-labelledby="addRep" class="modal fade" id="addRep" role="dialog"
+tabindex="-1">
+<div class="modal-dialog modal-dialog-centered modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+                <strong>Add new business representative</strong>
+            </h5>
+            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                <span aria-hidden="true"> &times;</span>
+            </button>
         </div>
+
+        <div class="modal-body">
+
+            <div class="tabs">
+                <a href="#" class="tab-link active" data-tab="nigerian">Nigerian</a>
+                <a href="#" class="tab-link" data-tab="other">Other Nationality</a>
+            </div>
+
+            {{-- <div class="tabs">
+                    <button type="button" class="tab-btn active" data-tab="nigerian">Nigerian</button>
+                    <button type="button" class="tab-btn" data-tab="other">Other Nationality</button>
+                </div> --}}
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Nigerian Tab -->
+                <div class="tab-panel active" id="nigerian">
+                    <form method="post" action="" enctype="multipart/form-data">
+                        @csrf
+                        {{-- <label>
+                            <input type="checkbox" id="under18">
+                            Are you a registered director under 18 years old without a BVN?
+                        </label> --}}
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="formalabel" for="">Bank Verification Number
+                                        (BVN)</label>
+                                    <input type="text" name="BVN" value=""
+                                        placeholder="Bank Verification Number" class="form-control"
+                                        required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="formalabel" for="">Designation</label>
+                                    <select id="designation" name="currency" required>
+                                        <option value="">Select Designation</option>
+                                        <option value="Business Owner">Business Owner</option>
+                                        <option value="Authorized Signatory">Authorized Signatory</option>
+                                        <option value="Director">Director</option>
+                                        <option value="Director & Shareholder">Director & Shareholder
+                                        </option>
+                                        <option value="Shareholder">Shareholder</option>
+                                        <option value="Member">Member</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="formalabel" for="">Verification Document</label>
+                                    <select id="veridoc" name="bank" required
+                                        onchange="setDocumentType('document-type', this.value)">
+                                        <option value="">Select Document Type</option>
+                                        <option value="Driver License">Driver License</option>
+                                        <option value="Permanent Voter Card (PVC)">Permanent Voter Card
+                                            (PVC)
+                                        </option>
+                                        <option value="National Identity Card">National Identity Card
+                                        </option>
+                                        <option value="International Passport">International Passport
+                                        </option>
+                                        <option value="Birth Certificate">Birth Certificate</option>
+                                        <option value="Resident Permit">Resident Permit</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- File Upload Fields -->
+                        <div class="row g-3">
+                            <!-- Driver License Upload -->
+                            <div class="col-12 col-md-6 mb-1">
+                                <label class="custom-file-upload d-flex align-items-center gap-2"
+                                    onclick="document.getElementById('driver-license').click()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14"
+                                        viewBox="0 0 16 14" fill="none">
+                                        <path
+                                            d="M10.6666 9.66698L7.99997 7.00031M7.99997 7.00031L5.33331 9.66698M7.99997 7.00031V13.0003M13.5933 11.2603C14.2435 10.9058 14.7572 10.3449 15.0532 9.66606C15.3492 8.98723 15.4108 8.22914 15.2281 7.51144C15.0454 6.79375 14.629 6.15732 14.0444 5.70261C13.4599 5.2479 12.7405 5.0008 12 5.00031H11.16C10.9582 4.21981 10.5821 3.4952 10.0599 2.88098C9.5378 2.26675 8.8832 1.77888 8.14537 1.45405C7.40754 1.12922 6.60567 0.975887 5.80005 1.00557C4.99443 1.03525 4.20602 1.24718 3.49409 1.62543C2.78216 2.00367 2.16525 2.53838 1.68972 3.18937C1.2142 3.84036 0.892433 4.59067 0.748627 5.38391C0.60482 6.17715 0.64271 6.99267 0.859449 7.76915C1.07619 8.54564 1.46613 9.26289 1.99997 9.86698"
+                                            stroke="#0765FF" stroke-width="1.45455"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg> <span id="document-type">Select Document</span>
+                                </label>
+                                <input type="file" id="driver-license" class="hidden-input"
+                                    onchange="updateFileName('document-type', this)">
+                            </div>
+
+                            <!-- Passport Photo Upload -->
+                            <div class="col-12 col-md-6 mb-1">
+                                <label class="custom-file-upload d-flex align-items-center gap-2"
+                                    onclick="document.getElementById('passport-photo').click()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14"
+                                        viewBox="0 0 16 14" fill="none">
+                                        <path
+                                            d="M10.6666 9.66698L7.99997 7.00031M7.99997 7.00031L5.33331 9.66698M7.99997 7.00031V13.0003M13.5933 11.2603C14.2435 10.9058 14.7572 10.3449 15.0532 9.66606C15.3492 8.98723 15.4108 8.22914 15.2281 7.51144C15.0454 6.79375 14.629 6.15732 14.0444 5.70261C13.4599 5.2479 12.7405 5.0008 12 5.00031H11.16C10.9582 4.21981 10.5821 3.4952 10.0599 2.88098C9.5378 2.26675 8.8832 1.77888 8.14537 1.45405C7.40754 1.12922 6.60567 0.975887 5.80005 1.00557C4.99443 1.03525 4.20602 1.24718 3.49409 1.62543C2.78216 2.00367 2.16525 2.53838 1.68972 3.18937C1.2142 3.84036 0.892433 4.59067 0.748627 5.38391C0.60482 6.17715 0.64271 6.99267 0.859449 7.76915C1.07619 8.54564 1.46613 9.26289 1.99997 9.86698"
+                                            stroke="#0765FF" stroke-width="1.45455"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg> <span id="passport-name">Passport Photo</span>
+                                </label>
+                                <input type="file" id="passport-photo" class="hidden-input"
+                                    onchange="updateFileName('passport-name', this)">
+                            </div>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary w-100 mt-4">Save</button>
+                    </form>
+                </div>
+
+                <!-- Other Nationality Tab -->
+                <div class="tab-panel" id="other">
+                    <form method="post" action="" enctype="multipart/form-data">
+                        @csrf
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="formalabel" for="">Last Name</label>
+                                    <input type="text" name="BVN" value=""
+                                        placeholder="Last Name" class="form-control" required />
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="formalabel" for="">Other Names</label>
+                                    <input type="text" name="BVN" value=""
+                                        placeholder="Other Names" class="form-control" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="formalabel" for="">Email Address</label>
+                                    <input type="email" name="BVN" value=""
+                                        placeholder="Email Address" class="form-control" required />
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="formalabel" for="">Phone Number</label>
+                                    <input type="text" name="BVN" value=""
+                                        placeholder="Phone Number" class="form-control" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="formalabel" for="">Date of Birth</label>
+                                    <input type="date" name="BVN" value=""
+                                        placeholder="Date of Birth" class="form-control" required />
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="formalabel" for="">Designation</label>
+                                    <select id="representative" name="currency" required>
+                                        <option value="">Select Designation</option>
+                                        <option value="Business Owner">Business Owner</option>
+                                        <option value="Authorized Signatory">Authorized Signatory
+                                        </option>
+                                        <option value="Director">Director</option>
+                                        <option value="Director & Shareholder">Director & Shareholder
+                                        </option>
+                                        <option value="Shareholder">Shareholder</option>
+                                        <option value="Member">Member</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- File Upload Fields -->
+                        <div class="row g-3">
+                            <!-- Driver License Upload -->
+                            <div class="col-12 col-md-6 mb-1">
+                                <label class="custom-file-upload d-flex align-items-center gap-2"
+                                    onclick="document.getElementById('foreigner-id').click()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14"
+                                        viewBox="0 0 16 14" fill="none">
+                                        <path
+                                            d="M10.6666 9.66698L7.99997 7.00031M7.99997 7.00031L5.33331 9.66698M7.99997 7.00031V13.0003M13.5933 11.2603C14.2435 10.9058 14.7572 10.3449 15.0532 9.66606C15.3492 8.98723 15.4108 8.22914 15.2281 7.51144C15.0454 6.79375 14.629 6.15732 14.0444 5.70261C13.4599 5.2479 12.7405 5.0008 12 5.00031H11.16C10.9582 4.21981 10.5821 3.4952 10.0599 2.88098C9.5378 2.26675 8.8832 1.77888 8.14537 1.45405C7.40754 1.12922 6.60567 0.975887 5.80005 1.00557C4.99443 1.03525 4.20602 1.24718 3.49409 1.62543C2.78216 2.00367 2.16525 2.53838 1.68972 3.18937C1.2142 3.84036 0.892433 4.59067 0.748627 5.38391C0.60482 6.17715 0.64271 6.99267 0.859449 7.76915C1.07619 8.54564 1.46613 9.26289 1.99997 9.86698"
+                                            stroke="#0765FF" stroke-width="1.45455"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg> <span id="foreigner-document">Resident permit /
+                                        International Passport</span>
+                                </label>
+                                <input type="file" id="foreigner-id" class="hidden-input"
+                                    onchange="updateFileName('foreigner-document', this)">
+                            </div>
+
+                            <!-- Passport Photo Upload -->
+                            <div class="col-12 col-md-6 mb-1">
+                                <label class="custom-file-upload d-flex align-items-center gap-2"
+                                    onclick="document.getElementById('foreigner-photo').click()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14"
+                                        viewBox="0 0 16 14" fill="none">
+                                        <path
+                                            d="M10.6666 9.66698L7.99997 7.00031M7.99997 7.00031L5.33331 9.66698M7.99997 7.00031V13.0003M13.5933 11.2603C14.2435 10.9058 14.7572 10.3449 15.0532 9.66606C15.3492 8.98723 15.4108 8.22914 15.2281 7.51144C15.0454 6.79375 14.629 6.15732 14.0444 5.70261C13.4599 5.2479 12.7405 5.0008 12 5.00031H11.16C10.9582 4.21981 10.5821 3.4952 10.0599 2.88098C9.5378 2.26675 8.8832 1.77888 8.14537 1.45405C7.40754 1.12922 6.60567 0.975887 5.80005 1.00557C4.99443 1.03525 4.20602 1.24718 3.49409 1.62543C2.78216 2.00367 2.16525 2.53838 1.68972 3.18937C1.2142 3.84036 0.892433 4.59067 0.748627 5.38391C0.60482 6.17715 0.64271 6.99267 0.859449 7.76915C1.07619 8.54564 1.46613 9.26289 1.99997 9.86698"
+                                            stroke="#0765FF" stroke-width="1.45455"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg> <span id="foreigner-passport">Passport Photo</span>
+                                </label>
+                                <input type="file" id="foreigner-photo" class="hidden-input"
+                                    onchange="updateFileName('foreigner-passport', this)">
+                            </div>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary w-100">Save</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
+</div>
 
+
+
+@endsection
+
+@section('customjs')
+<script src="{{ asset('js/bizreps.js') }}?version=4.5.0"></script>
 @endsection
 
